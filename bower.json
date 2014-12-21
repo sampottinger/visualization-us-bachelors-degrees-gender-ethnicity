@@ -1,0 +1,35 @@
+{
+  "name": "visualization_of_us_bachelor's_degrees_by_gender_and_ethnic_diversity",
+  "version": "0.0.0",
+  "description": "This small webpage visualizes public US Census data about what bachelor's degrees different parts of the population studied while in college, dissecting those groups by gender and ethnicity. The user may also examine some supplementary information about outcomes after earning a degree.",
+  "main": "disciplines_stats.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "visualization",
+    "census",
+    "education",
+    "income",
+    "unemployment",
+    "demographics"
+  ],
+  "authors": [
+    "Sam Pottinger (Google Inc)"
+  ],
+  "license": "Apache 2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "d3": "~3.5.2",
+    "jquery": "~2.1.3",
+    "jasmine": "~2"
+  }
+}

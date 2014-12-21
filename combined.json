@@ -1,0 +1,1705 @@
+{
+    "_comment": [
+        "Data pulled from US Census American Community Survey about education.",
+        "",
+        "Data retrieved from the United States Census and its American Community",
+        "Survey (2009-12) that discusses what people are studying in college and",
+        "various other metrics related to careers.",
+        "",
+        "Copyright 2014 Google Inc.",
+        "",
+        "Licensed under the Apache License, Version 2.0 (the \"License\");",
+        "you may not use this file except in compliance with the License.",
+        "You may obtain a copy of the License at",
+        "",
+        "    http://www.apache.org/licenses/LICENSE-2.0",
+        "",
+        "@author Sam Pottinger"
+    ],
+    "percent": {
+        "Total": {
+            "size": {
+                "by_gender": {
+                    "men": 49.3,
+                    "women": 50.6
+                },
+                "by_ethnicity": {
+                    "asian": 5.3,
+                    "black_or_african_american": 12.3,
+                    "hispanic_or_latino": 15.0,
+                    "white_not_hispanic": 65.5
+                },
+                "total": 100
+            },
+            "earnings":  {
+                "by_gender": {
+                    "men": 113.0,
+                    "women": 87.8
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_gender": {
+                    "men": 103.8,
+                    "women": 97.2
+                },
+                "by_ethnicity": {
+                    "asian": 103.8,
+                    "black_or_african_american": 167,
+                    "hispanic_or_latino": 136.1,
+                    "white_not_hispanic": 86.1
+                },
+                "total": 100
+            }
+        },
+        "Art / humanities other": {
+            "earnings": {
+                "by_gender": {
+                    "men": 118.49114116974661,
+                    "women": 88.65307677652886
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 3.9,
+                    "black_or_african_american": 12.8,
+                    "hispanic_or_latino": 8.8,
+                    "white_not_hispanic": 72.5
+                },
+                "by_gender": {
+                    "men": 44.9,
+                    "women": 55.1
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 69.23076923076924,
+                    "black_or_african_american": 156.4102564102564,
+                    "hispanic_or_latino": 117.94871794871796,
+                    "white_not_hispanic": 87.17948717948718
+                },
+                "by_gender": {
+                    "men": 89.74358974358975,
+                    "women": 105.12820512820514
+                },
+                "total": 100
+            }
+        },
+        "Bio, agricult, and enviro sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 110.3134594787576,
+                    "women": 85.17815066047841
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 11.4,
+                    "black_or_african_american": 5.4,
+                    "hispanic_or_latino": 5.6,
+                    "white_not_hispanic": 75.6
+                },
+                "by_gender": {
+                    "men": 55.9,
+                    "women": 44.1
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 107.14285714285714,
+                    "black_or_african_american": 185.71428571428575,
+                    "hispanic_or_latino": 146.42857142857142,
+                    "white_not_hispanic": 89.28571428571429
+                },
+                "by_gender": {
+                    "men": 100.0,
+                    "women": 103.57142857142858
+                },
+                "total": 100
+            }
+        },
+        "Business": {
+            "earnings": {
+                "by_gender": {
+                    "men": 114.30072817356054,
+                    "women": 84.30598303430673
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 8.2,
+                    "black_or_african_american": 9.4,
+                    "hispanic_or_latino": 7.8,
+                    "white_not_hispanic": 73.1
+                },
+                "by_gender": {
+                    "men": 56.1,
+                    "women": 43.9
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 117.94871794871796,
+                    "black_or_african_american": 156.4102564102564,
+                    "hispanic_or_latino": 125.64102564102566,
+                    "white_not_hispanic": 84.61538461538461
+                },
+                "by_gender": {
+                    "men": 97.43589743589743,
+                    "women": 102.56410256410258
+                },
+                "total": 100
+            }
+        },
+        "Communications": {
+            "earnings": {
+                "by_gender": {
+                    "men": 110.33137005675002,
+                    "women": 92.1015413809771
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 4.1,
+                    "black_or_african_american": 8.6,
+                    "hispanic_or_latino": 6.6,
+                    "white_not_hispanic": 79.0
+                },
+                "by_gender": {
+                    "men": 44.1,
+                    "women": 55.9
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 121.27659574468086,
+                    "black_or_african_american": 163.82978723404256,
+                    "hispanic_or_latino": 131.91489361702128,
+                    "white_not_hispanic": 89.36170212765957
+                },
+                "by_gender": {
+                    "men": 104.25531914893618,
+                    "women": 95.74468085106382
+                },
+                "total": 100
+            }
+        },
+        "Computers, maths, and stats": {
+            "earnings": {
+                "by_gender": {
+                    "men": 104.89773010725867,
+                    "women": 84.22673983537041
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 19.8,
+                    "black_or_african_american": 8.5,
+                    "hispanic_or_latino": 6.5,
+                    "white_not_hispanic": 63.3
+                },
+                "by_gender": {
+                    "men": 70.4,
+                    "women": 29.6
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 100.0,
+                    "black_or_african_american": 194.28571428571428,
+                    "hispanic_or_latino": 117.14285714285712,
+                    "white_not_hispanic": 85.71428571428571
+                },
+                "by_gender": {
+                    "men": 94.28571428571428,
+                    "women": 108.57142857142857
+                },
+                "total": 100
+            }
+        },
+        "Education": {
+            "earnings": {
+                "by_gender": {
+                    "men": 112.52799497072807,
+                    "women": 96.36752976307415
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 2.7,
+                    "black_or_african_american": 7.8,
+                    "hispanic_or_latino": 7.1,
+                    "white_not_hispanic": 81.1
+                },
+                "by_gender": {
+                    "men": 24.7,
+                    "women": 75.3
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 156.0,
+                    "black_or_african_american": 172.0,
+                    "hispanic_or_latino": 156.0,
+                    "white_not_hispanic": 84.00000000000001
+                },
+                "by_gender": {
+                    "men": 115.99999999999999,
+                    "women": 92.0
+                },
+                "total": 100
+            }
+        },
+        "Engineering": {
+            "earnings": {
+                "by_gender": {
+                    "men": 102.29557585879425,
+                    "women": 84.83042429402583
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 22.0,
+                    "black_or_african_american": 4.6,
+                    "hispanic_or_latino": 8.2,
+                    "white_not_hispanic": 63.3
+                },
+                "by_gender": {
+                    "men": 85.8,
+                    "women": 14.2
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 93.54838709677419,
+                    "black_or_african_american": 183.8709677419355,
+                    "hispanic_or_latino": 154.83870967741936,
+                    "white_not_hispanic": 87.09677419354838
+                },
+                "by_gender": {
+                    "men": 96.77419354838709,
+                    "women": 116.12903225806453
+                },
+                "total": 100
+            }
+        },
+        "Liberal arts / history": {
+            "earnings": {
+                "by_gender": {
+                    "men": 105.83720494886065,
+                    "women": 87.72485151716273
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 5.3,
+                    "black_or_african_american": 6.5,
+                    "hispanic_or_latino": 6.4,
+                    "white_not_hispanic": 80.0
+                },
+                "by_gender": {
+                    "men": 60.2,
+                    "women": 39.8
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 129.26829268292684,
+                    "black_or_african_american": 165.85365853658539,
+                    "hispanic_or_latino": 148.78048780487805,
+                    "white_not_hispanic": 87.8048780487805
+                },
+                "by_gender": {
+                    "men": 100.0,
+                    "women": 102.4390243902439
+                },
+                "total": 100
+            }
+        },
+        "Literature / languages": {
+            "earnings": {
+                "by_gender": {
+                    "men": 114.37832673672716,
+                    "women": 92.169373549884
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 6.8,
+                    "black_or_african_american": 5.6,
+                    "hispanic_or_latino": 6.6,
+                    "white_not_hispanic": 79.2
+                },
+                "by_gender": {
+                    "men": 35.0,
+                    "women": 65.0
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 90.24390243902441,
+                    "black_or_african_american": 178.0487804878049,
+                    "hispanic_or_latino": 121.95121951219514,
+                    "white_not_hispanic": 92.6829268292683
+                },
+                "by_gender": {
+                    "men": 107.31707317073173,
+                    "women": 95.1219512195122
+                },
+                "total": 100
+            }
+        },
+        "Multidisciplinary studies": {
+            "earnings": {
+                "by_gender": {
+                    "men": 127.25477524055724,
+                    "women": 93.2769639523194
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 9.0,
+                    "black_or_african_american": 7.9,
+                    "hispanic_or_latino": 8.8,
+                    "white_not_hispanic": 72.0
+                },
+                "by_gender": {
+                    "men": 31.2,
+                    "women": 68.8
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 95.0,
+                    "black_or_african_american": 125.0,
+                    "hispanic_or_latino": 137.5,
+                    "white_not_hispanic": 92.5
+                },
+                "by_gender": {
+                    "men": 105.0,
+                    "women": 100.0
+                },
+                "total": 100
+            }
+        },
+        "Physical and related sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 113.25761835151242,
+                    "women": 76.6682909154516
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 15.6,
+                    "black_or_african_american": 5.5,
+                    "hispanic_or_latino": 5.7,
+                    "white_not_hispanic": 71.2
+                },
+                "by_gender": {
+                    "men": 64.5,
+                    "women": 35.5
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 109.375,
+                    "black_or_african_american": 221.87499999999994,
+                    "hispanic_or_latino": 125.0,
+                    "white_not_hispanic": 84.375
+                },
+                "by_gender": {
+                    "men": 100.0,
+                    "women": 100.0
+                },
+                "total": 100
+            }
+        },
+        "Psychology": {
+            "earnings": {
+                "by_gender": {
+                    "men": 120.55342376911852,
+                    "women": 91.66081176025509
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 5.1,
+                    "black_or_african_american": 9.5,
+                    "hispanic_or_latino": 8.2,
+                    "white_not_hispanic": 75.0
+                },
+                "by_gender": {
+                    "men": 31.3,
+                    "women": 68.7
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 117.07317073170734,
+                    "black_or_african_american": 148.78048780487805,
+                    "hispanic_or_latino": 117.07317073170734,
+                    "white_not_hispanic": 90.24390243902441
+                },
+                "by_gender": {
+                    "men": 107.31707317073173,
+                    "women": 97.56097560975611
+                },
+                "total": 100
+            }
+        },
+        "Sci / eng related": {
+            "earnings": {
+                "by_gender": {
+                    "men": 112.30050994756877,
+                    "women": 94.46383681677798
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 11.6,
+                    "black_or_african_american": 8.5,
+                    "hispanic_or_latino": 6.5,
+                    "white_not_hispanic": 71.8
+                },
+                "by_gender": {
+                    "men": 29.6,
+                    "women": 70.4
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 100.0,
+                    "black_or_african_american": 169.23076923076923,
+                    "hispanic_or_latino": 161.53846153846155,
+                    "white_not_hispanic": 84.61538461538461
+                },
+                "by_gender": {
+                    "men": 115.38461538461537,
+                    "women": 96.15384615384615
+                },
+                "total": 100
+            }
+        },
+        "Social sciences": {
+            "earnings": {
+                "by_gender": {
+                    "men": 114.71430403008675,
+                    "women": 81.72713933643888
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 7.7,
+                    "black_or_african_american": 8.5,
+                    "hispanic_or_latino": 7.6,
+                    "white_not_hispanic": 74.2
+                },
+                "by_gender": {
+                    "men": 55.1,
+                    "women": 44.9
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 107.14285714285714,
+                    "black_or_african_american": 164.28571428571428,
+                    "hispanic_or_latino": 133.33333333333331,
+                    "white_not_hispanic": 88.09523809523809
+                },
+                "by_gender": {
+                    "men": 102.38095238095238,
+                    "women": 100.0
+                },
+                "total": 100
+            }
+        },
+        "Visual / performing arts": {
+            "earnings": {
+                "by_gender": {
+                    "men": 106.80017431265352,
+                    "women": 92.44513113065526
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 6.9,
+                    "black_or_african_american": 5.1,
+                    "hispanic_or_latino": 6.8,
+                    "white_not_hispanic": 79.5
+                },
+                "by_gender": {
+                    "men": 42.0,
+                    "women": 58.0
+                },
+                "total": 100
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 108.0,
+                    "black_or_african_american": 158.0,
+                    "hispanic_or_latino": 144.0,
+                    "white_not_hispanic": 90.0
+                },
+                "by_gender": {
+                    "men": 111.99999999999999,
+                    "women": 94.0
+                },
+                "total": 100
+            }
+        }
+    },
+    "percent_by_pop_group": {
+        "Total": {
+            "size": {
+                "by_ethnicity": {
+                    "asian": 47.23,
+                    "black_or_african_american": 16.52,
+                    "hispanic_or_latino": 12.86,
+                    "white_not_hispanic": 28.33
+                },
+                "by_gender": {
+                    "women": 25.26,
+                    "men": 25.63
+                },
+                "total": 25.44
+            },
+            "earnings": {
+                "by_gender": {
+                    "men": 158.31,
+                    "women": 147.15
+                },
+                "total": 151.77
+            },
+            "unemployment": {
+                "by_gender": {
+                    "men": 3.7,
+                    "women": 3.5
+                },
+                "by_ethnicity": {
+                    "asian": 3.7,
+                    "black_or_african_american": 6.0,
+                    "hispanic_or_latino": 4.9,
+                    "white_not_hispanic": 3.1
+                },
+                "total": 3.6
+            }
+        },
+        "Art / humanities other": {
+            "earnings": {
+                "by_gender": {
+                    "men": 129.7047047047047,
+                    "women": 124.96374671034964
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.0427531687208473,
+                    "black_or_african_american": 1.4919968034655569,
+                    "hispanic_or_latino": 0.8401128963453457,
+                    "white_not_hispanic": 1.5794127538403238
+                },
+                "by_gender": {
+                    "men": 1.2960596607165749,
+                    "women": 1.5542288463748628
+                },
+                "total": 1.4267106890619996
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 69.23076923076924,
+                    "black_or_african_american": 156.4102564102564,
+                    "hispanic_or_latino": 117.94871794871796,
+                    "white_not_hispanic": 87.17948717948718
+                },
+                "by_gender": {
+                    "men": 94.5945945945946,
+                    "women": 117.14285714285712
+                },
+                "total": 108.33333333333333
+            }
+        },
+        "Bio, agricult, and enviro sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 161.09234234234233,
+                    "women": 160.17508996186692
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 3.6195139070915183,
+                    "black_or_african_american": 0.7352966093332985,
+                    "hispanic_or_latino": 0.635453262300287,
+                    "white_not_hispanic": 1.9430644117334288
+                },
+                "by_gender": {
+                    "men": 1.90437178313007,
+                    "women": 1.4681561323053882
+                },
+                "total": 1.6836172294241607
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 107.14285714285714,
+                    "black_or_african_american": 185.71428571428575,
+                    "hispanic_or_latino": 146.42857142857142,
+                    "white_not_hispanic": 89.28571428571429
+                },
+                "by_gender": {
+                    "men": 75.67567567567566,
+                    "women": 82.85714285714285
+                },
+                "total": 77.77777777777777
+            }
+        },
+        "Business": {
+            "earnings": {
+                "by_gender": {
+                    "men": 158.76292959626292,
+                    "women": 150.79220151458188
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 8.626496593103077,
+                    "black_or_african_american": 4.27996945392005,
+                    "hispanic_or_latino": 2.923329961260009,
+                    "white_not_hispanic": 6.22984262635596
+                },
+                "by_gender": {
+                    "men": 6.3363830768508915,
+                    "women": 4.840856695040317
+                },
+                "total": 5.579545814483398
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 117.94871794871796,
+                    "black_or_african_american": 156.4102564102564,
+                    "hispanic_or_latino": 125.64102564102566,
+                    "white_not_hispanic": 84.61538461538461
+                },
+                "by_gender": {
+                    "men": 102.7027027027027,
+                    "women": 114.28571428571428
+                },
+                "total": 108.33333333333333
+            }
+        },
+        "Communications": {
+            "earnings": {
+                "by_gender": {
+                    "men": 128.52435769102436,
+                    "women": 138.15725871421668
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 0.8276524762976251,
+                    "black_or_african_american": 0.7418497441436901,
+                    "hispanic_or_latino": 0.4689453194611144,
+                    "white_not_hispanic": 1.2769932541623827
+                },
+                "by_gender": {
+                    "men": 0.9459080011089166,
+                    "women": 1.1698475921354434
+                },
+                "total": 1.059236544870895
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 121.27659574468086,
+                    "black_or_african_american": 163.82978723404256,
+                    "hispanic_or_latino": 131.91489361702128,
+                    "white_not_hispanic": 89.36170212765957
+                },
+                "by_gender": {
+                    "men": 132.43243243243242,
+                    "women": 128.57142857142858
+                },
+                "total": 130.55555555555557
+            }
+        },
+        "Computers, maths, and stats": {
+            "earnings": {
+                "by_gender": {
+                    "men": 175.3983149816483,
+                    "women": 181.35506740426445
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 4.489042860834588,
+                    "black_or_african_american": 0.8253959837605844,
+                    "hispanic_or_latino": 0.5179770809787916,
+                    "white_not_hispanic": 1.158148940381374
+                },
+                "by_gender": {
+                    "men": 1.7073326144004517,
+                    "women": 0.6997135742996655
+                },
+                "total": 1.1974093893109772
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 100.0,
+                    "black_or_african_american": 194.28571428571428,
+                    "hispanic_or_latino": 117.14285714285712,
+                    "white_not_hispanic": 85.71428571428571
+                },
+                "by_gender": {
+                    "men": 89.18918918918918,
+                    "women": 108.57142857142857
+                },
+                "total": 97.22222222222221
+            }
+        },
+        "Education": {
+            "earnings": {
+                "by_gender": {
+                    "men": 119.4507007007007,
+                    "women": 131.72834201621998
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.4148473310705787,
+                    "black_or_african_american": 1.7452268760055198,
+                    "hispanic_or_latino": 1.290217118437261,
+                    "white_not_hispanic": 3.3825426043989637
+                },
+                "by_gender": {
+                    "men": 1.3664215147350995,
+                    "women": 4.065423521037088
+                },
+                "total": 2.732295594619082
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 156.0,
+                    "black_or_african_american": 172.0,
+                    "hispanic_or_latino": 156.0,
+                    "white_not_hispanic": 84.00000000000001
+                },
+                "by_gender": {
+                    "men": 78.37837837837837,
+                    "women": 65.71428571428571
+                },
+                "total": 69.44444444444444
+            }
+        },
+        "Engineering": {
+            "earnings": {
+                "by_gender": {
+                    "men": 195.43293293293294,
+                    "women": 208.69541865835976
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 8.499827468912926,
+                    "black_or_african_american": 0.7702300504137893,
+                    "hispanic_or_latino": 1.1180956308781214,
+                    "white_not_hispanic": 1.9722716753769713
+                },
+                "by_gender": {
+                    "men": 3.547039033275627,
+                    "women": 0.5711115945113353
+                },
+                "total": 2.0410189435250787
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 93.54838709677419,
+                    "black_or_african_american": 183.8709677419355,
+                    "hispanic_or_latino": 154.83870967741936,
+                    "white_not_hispanic": 87.09677419354838
+                },
+                "by_gender": {
+                    "men": 81.08108108108108,
+                    "women": 102.85714285714288
+                },
+                "total": 86.11111111111111
+            }
+        },
+        "Liberal arts / history": {
+            "earnings": {
+                "by_gender": {
+                    "men": 129.69427761094428,
+                    "women": 138.4284870293786
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.1628953384953649,
+                    "black_or_african_american": 0.6191092799764306,
+                    "hispanic_or_latino": 0.5023816331022282,
+                    "white_not_hispanic": 1.4290753500006093
+                },
+                "by_gender": {
+                    "men": 1.4255635724113596,
+                    "women": 0.9212762585315247
+                },
+                "total": 1.1703601639489782
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 129.26829268292684,
+                    "black_or_african_american": 165.85365853658539,
+                    "hispanic_or_latino": 148.78048780487805,
+                    "white_not_hispanic": 87.8048780487805
+                },
+                "by_gender": {
+                    "men": 110.81081081081079,
+                    "women": 120.0
+                },
+                "total": 113.88888888888889
+            }
+        },
+        "Literature / languages": {
+            "earnings": {
+                "by_gender": {
+                    "men": 139.8148148148148,
+                    "women": 145.08297975186636
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.24999841158189,
+                    "black_or_african_american": 0.44451682516116725,
+                    "hispanic_or_latino": 0.43238583366670985,
+                    "white_not_hispanic": 1.184785815545825
+                },
+                "by_gender": {
+                    "men": 0.6932089937442152,
+                    "women": 1.2581177019070702
+                },
+                "total": 0.9790939732737279
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 90.24390243902441,
+                    "black_or_african_american": 178.0487804878049,
+                    "hispanic_or_latino": 121.95121951219514,
+                    "white_not_hispanic": 92.6829268292683
+                },
+                "by_gender": {
+                    "men": 118.91891891891892,
+                    "women": 111.42857142857143
+                },
+                "total": 113.88888888888889
+            }
+        },
+        "Multidisciplinary studies": {
+            "earnings": {
+                "by_gender": {
+                    "men": 147.826993660327,
+                    "women": 139.53219829206725
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 0.28539541387302425,
+                    "black_or_african_american": 0.10811426594026372,
+                    "hispanic_or_latino": 0.09910458041978455,
+                    "white_not_hispanic": 0.18492335698669188
+                },
+                "by_gender": {
+                    "men": 0.10614273706152444,
+                    "women": 0.2287585514762702
+                },
+                "total": 0.16819461286479
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 95.0,
+                    "black_or_african_american": 125.0,
+                    "hispanic_or_latino": 137.5,
+                    "white_not_hispanic": 92.5
+                },
+                "by_gender": {
+                    "men": 113.51351351351352,
+                    "women": 114.28571428571428
+                },
+                "total": 111.11111111111111
+            }
+        },
+        "Physical and related sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 189.03903903903904,
+                    "women": 164.78597131961973
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 2.333992690504182,
+                    "black_or_african_american": 0.35596229620249076,
+                    "hispanic_or_latino": 0.29835479864378395,
+                    "white_not_hispanic": 0.8584677674497609
+                },
+                "by_gender": {
+                    "men": 1.030545097662142,
+                    "women": 0.5546673475534697
+                },
+                "total": 0.7897188454513211
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 109.375,
+                    "black_or_african_american": 221.87499999999994,
+                    "hispanic_or_latino": 125.0,
+                    "white_not_hispanic": 84.375
+                },
+                "by_gender": {
+                    "men": 86.48648648648648,
+                    "women": 91.42857142857143
+                },
+                "total": 88.8888888888889
+            }
+        },
+        "Psychology": {
+            "earnings": {
+                "by_gender": {
+                    "men": 139.55205205205206,
+                    "women": 136.63462054890167
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.172599129130999,
+                    "black_or_african_american": 0.9454703436513728,
+                    "hispanic_or_latino": 0.6643987401654269,
+                    "white_not_hispanic": 1.3913592141504187
+                },
+                "by_gender": {
+                    "men": 0.7706589881200913,
+                    "women": 1.6473585812570186
+                },
+                "total": 1.2143281390348026
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 117.07317073170734,
+                    "black_or_african_american": 148.78048780487805,
+                    "hispanic_or_latino": 117.07317073170734,
+                    "white_not_hispanic": 90.24390243902441
+                },
+                "by_gender": {
+                    "men": 118.91891891891892,
+                    "women": 114.28571428571428
+                },
+                "total": 113.88888888888889
+            }
+        },
+        "Sci / eng related": {
+            "earnings": {
+                "by_gender": {
+                    "men": 163.03386720053388,
+                    "women": 176.5964874590472
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 5.295266132811855,
+                    "black_or_african_american": 1.6729679750544333,
+                    "hispanic_or_latino": 1.0497941013035386,
+                    "white_not_hispanic": 2.6422194079500594
+                },
+                "by_gender": {
+                    "men": 1.4440756178647214,
+                    "women": 3.3551696915287463
+                },
+                "total": 2.411218173442737
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 100.0,
+                    "black_or_african_american": 169.23076923076923,
+                    "hispanic_or_latino": 161.53846153846155,
+                    "white_not_hispanic": 84.61538461538461
+                },
+                "by_gender": {
+                    "men": 81.08108108108108,
+                    "women": 71.42857142857143
+                },
+                "total": 72.22222222222221
+            }
+        },
+        "Social sciences": {
+            "earnings": {
+                "by_gender": {
+                    "men": 167.93043043043042,
+                    "women": 154.06305386970297
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 2.8547050272913337,
+                    "black_or_african_american": 1.3531102124650891,
+                    "hispanic_or_latino": 0.9857792786060218,
+                    "white_not_hispanic": 2.212619325503566
+                },
+                "by_gender": {
+                    "men": 2.1799557113692916,
+                    "women": 1.7321152726257536
+                },
+                "total": 1.9533182305742203
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 107.14285714285714,
+                    "black_or_african_american": 164.28571428571428,
+                    "hispanic_or_latino": 133.33333333333331,
+                    "white_not_hispanic": 88.09523809523809
+                },
+                "by_gender": {
+                    "men": 116.21621621621621,
+                    "women": 120.0
+                },
+                "total": 116.66666666666667
+            }
+        },
+        "Visual / performing arts": {
+            "earnings": {
+                "by_gender": {
+                    "men": 112.43952285618953,
+                    "women": 125.3289650357162
+                },
+                "total": 100
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 1.349635547572776,
+                    "black_or_african_american": 0.42904345361267593,
+                    "hispanic_or_latino": 0.4684758229936263,
+                    "white_not_hispanic": 1.2577643225638069
+                },
+                "by_gender": {
+                    "men": 0.8807540128677828,
+                    "women": 1.1887488172547818
+                },
+                "total": 1.0366201663578072
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 108.0,
+                    "black_or_african_american": 158.0,
+                    "hispanic_or_latino": 144.0,
+                    "white_not_hispanic": 90.0
+                },
+                "by_gender": {
+                    "men": 151.35135135135133,
+                    "women": 134.2857142857143
+                },
+                "total": 138.88888888888889
+            }
+        }
+    },
+    "population": {
+        "Total": {
+            "size": {
+                "by_gender": {
+                    "men": 20722680,
+                    "women": 20917990
+                },
+                "by_ethnicity": {
+                    "asian": 3828265,
+                    "black_or_african_american": 3314670,
+                    "hispanic_or_latino": 3011540,
+                    "white_not_hispanic": 30765050
+                },
+                "total": 41640670
+            },
+            "earnings":  {
+                "by_gender": {
+                    "men": 75914,
+                    "women": 54796
+                },
+                "total": 64396
+            },
+            "unemployment": {
+                "by_gender": {
+                    "men": 3.7,
+                    "women": 3.5
+                },
+                "by_ethnicity": {
+                    "asian": 3.7,
+                    "black_or_african_american": 6.0,
+                    "hispanic_or_latino": 4.9,
+                    "white_not_hispanic": 3.1
+                },
+                "total": 3.6
+            }
+        },
+        "Art / humanities other": {
+            "earnings": {
+                "by_gender": {
+                    "men": 62196.0,
+                    "women": 46534.0
+                },
+                "total": 52490.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 90265,
+                    "black_or_african_american": 299395,
+                    "hispanic_or_latino": 205780,
+                    "white_not_hispanic": 1692850
+                },
+                "by_gender": {
+                    "men": 1047725,
+                    "women": 1287295
+                },
+                "total": 2335020
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 2.7,
+                    "black_or_african_american": 6.1,
+                    "hispanic_or_latino": 4.6,
+                    "white_not_hispanic": 3.4
+                },
+                "by_gender": {
+                    "men": 3.5,
+                    "women": 4.1
+                },
+                "total": 3.9
+            }
+        },
+        "Bio, agricult, and enviro sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 77247.0,
+                    "women": 59646.0
+                },
+                "total": 70025.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 313320,
+                    "black_or_african_american": 147550,
+                    "hispanic_or_latino": 155650,
+                    "white_not_hispanic": 2082620
+                },
+                "by_gender": {
+                    "men": 1539480,
+                    "women": 1216005
+                },
+                "total": 2755485
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.0,
+                    "black_or_african_american": 5.2,
+                    "hispanic_or_latino": 4.1,
+                    "white_not_hispanic": 2.5
+                },
+                "by_gender": {
+                    "men": 2.8,
+                    "women": 2.9
+                },
+                "total": 2.8
+            }
+        },
+        "Business": {
+            "earnings": {
+                "by_gender": {
+                    "men": 76130.0,
+                    "women": 56152.0
+                },
+                "total": 66605.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 746745,
+                    "black_or_african_american": 858850,
+                    "hispanic_or_latino": 716050,
+                    "white_not_hispanic": 6677285
+                },
+                "by_gender": {
+                    "men": 5122285,
+                    "women": 4009455
+                },
+                "total": 9131740
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 4.6,
+                    "black_or_african_american": 6.1,
+                    "hispanic_or_latino": 4.9,
+                    "white_not_hispanic": 3.3
+                },
+                "by_gender": {
+                    "men": 3.8,
+                    "women": 4.0
+                },
+                "total": 3.9
+            }
+        },
+        "Communications": {
+            "earnings": {
+                "by_gender": {
+                    "men": 61630.0,
+                    "women": 51447.0
+                },
+                "total": 55859.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 71645,
+                    "black_or_african_american": 148865,
+                    "hispanic_or_latino": 114865,
+                    "white_not_hispanic": 1368710
+                },
+                "by_gender": {
+                    "men": 764665,
+                    "women": 968930
+                },
+                "total": 1733595
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 5.7,
+                    "black_or_african_american": 7.7,
+                    "hispanic_or_latino": 6.2,
+                    "white_not_hispanic": 4.2
+                },
+                "by_gender": {
+                    "men": 4.9,
+                    "women": 4.5
+                },
+                "total": 4.7
+            }
+        },
+        "Computers, maths, and stats": {
+            "earnings": {
+                "by_gender": {
+                    "men": 84107.0,
+                    "women": 67533.0
+                },
+                "total": 80180.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 388590,
+                    "black_or_african_american": 165630,
+                    "hispanic_or_latino": 126875,
+                    "white_not_hispanic": 1241330
+                },
+                "by_gender": {
+                    "men": 1380195,
+                    "women": 579540
+                },
+                "total": 1959735
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.5,
+                    "black_or_african_american": 6.8,
+                    "hispanic_or_latino": 4.1,
+                    "white_not_hispanic": 3.0
+                },
+                "by_gender": {
+                    "men": 3.3,
+                    "women": 3.8
+                },
+                "total": 3.5
+            }
+        },
+        "Education": {
+            "earnings": {
+                "by_gender": {
+                    "men": 57279.0,
+                    "women": 49053.0
+                },
+                "total": 50902.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 122475,
+                    "black_or_african_american": 350210,
+                    "hispanic_or_latino": 316030,
+                    "white_not_hispanic": 3625485
+                },
+                "by_gender": {
+                    "men": 1104605,
+                    "women": 3367200
+                },
+                "total": 4471800
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.9,
+                    "black_or_african_american": 4.3,
+                    "hispanic_or_latino": 3.9,
+                    "white_not_hispanic": 2.1
+                },
+                "by_gender": {
+                    "men": 2.9,
+                    "women": 2.3
+                },
+                "total": 2.5
+            }
+        },
+        "Engineering": {
+            "earnings": {
+                "by_gender": {
+                    "men": 93714.0,
+                    "women": 77714.0
+                },
+                "total": 91611.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 735780,
+                    "black_or_african_american": 154560,
+                    "hispanic_or_latino": 273870,
+                    "white_not_hispanic": 2113925
+                },
+                "by_gender": {
+                    "men": 2867400,
+                    "women": 473025
+                },
+                "total": 3340425
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 2.9,
+                    "black_or_african_american": 5.7,
+                    "hispanic_or_latino": 4.8,
+                    "white_not_hispanic": 2.7
+                },
+                "by_gender": {
+                    "men": 3.0,
+                    "women": 3.6
+                },
+                "total": 3.1
+            }
+        },
+        "Liberal arts / history": {
+            "earnings": {
+                "by_gender": {
+                    "men": 62191.0,
+                    "women": 51548.0
+                },
+                "total": 58761.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 100665,
+                    "black_or_african_american": 124235,
+                    "hispanic_or_latino": 123055,
+                    "white_not_hispanic": 1531715
+                },
+                "by_gender": {
+                    "men": 1152415,
+                    "women": 763050
+                },
+                "total": 1915465
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 5.3,
+                    "black_or_african_american": 6.8,
+                    "hispanic_or_latino": 6.1,
+                    "white_not_hispanic": 3.6
+                },
+                "by_gender": {
+                    "men": 4.1,
+                    "women": 4.2
+                },
+                "total": 4.1
+            }
+        },
+        "Literature / languages": {
+            "earnings": {
+                "by_gender": {
+                    "men": 67044.0,
+                    "women": 54026.0
+                },
+                "total": 58616.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 108205,
+                    "black_or_african_american": 89200,
+                    "hispanic_or_latino": 105910,
+                    "white_not_hispanic": 1269880
+                },
+                "by_gender": {
+                    "men": 560385,
+                    "women": 1042040
+                },
+                "total": 1602430
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.7,
+                    "black_or_african_american": 7.3,
+                    "hispanic_or_latino": 5.0,
+                    "white_not_hispanic": 3.8
+                },
+                "by_gender": {
+                    "men": 4.4,
+                    "women": 3.9
+                },
+                "total": 4.1
+            }
+        },
+        "Multidisciplinary studies": {
+            "earnings": {
+                "by_gender": {
+                    "men": 70886.0,
+                    "women": 51959.0
+                },
+                "total": 55704.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 24705,
+                    "black_or_african_american": 21695,
+                    "hispanic_or_latino": 24275,
+                    "white_not_hispanic": 198205
+                },
+                "by_gender": {
+                    "men": 85805,
+                    "women": 189470
+                },
+                "total": 275275
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.8,
+                    "black_or_african_american": 5.0,
+                    "hispanic_or_latino": 5.5,
+                    "white_not_hispanic": 3.7
+                },
+                "by_gender": {
+                    "men": 4.2,
+                    "women": 4.0
+                },
+                "total": 4.0
+            }
+        },
+        "Physical and related sci": {
+            "earnings": {
+                "by_gender": {
+                    "men": 90648.0,
+                    "women": 61363.0
+                },
+                "total": 80037.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 202040,
+                    "black_or_african_american": 71430,
+                    "hispanic_or_latino": 73080,
+                    "white_not_hispanic": 920125
+                },
+                "by_gender": {
+                    "men": 833085,
+                    "women": 459405
+                },
+                "total": 1292490
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 3.5,
+                    "black_or_african_american": 7.1,
+                    "hispanic_or_latino": 4.0,
+                    "white_not_hispanic": 2.7
+                },
+                "by_gender": {
+                    "men": 3.2,
+                    "women": 3.2
+                },
+                "total": 3.2
+            }
+        },
+        "Psychology": {
+            "earnings": {
+                "by_gender": {
+                    "men": 66918.0,
+                    "women": 50880.0
+                },
+                "total": 55509.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 101505,
+                    "black_or_african_american": 189725,
+                    "hispanic_or_latino": 162740,
+                    "white_not_hispanic": 1491290
+                },
+                "by_gender": {
+                    "men": 622995,
+                    "women": 1364430
+                },
+                "total": 1987425
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 4.8,
+                    "black_or_african_american": 6.1,
+                    "hispanic_or_latino": 4.8,
+                    "white_not_hispanic": 3.7
+                },
+                "by_gender": {
+                    "men": 4.4,
+                    "women": 4.0
+                },
+                "total": 4.1
+            }
+        },
+        "Sci / eng related": {
+            "earnings": {
+                "by_gender": {
+                    "men": 78178.0,
+                    "women": 65761.0
+                },
+                "total": 69615.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 458380,
+                    "black_or_african_american": 335710,
+                    "hispanic_or_latino": 257140,
+                    "white_not_hispanic": 2831990
+                },
+                "by_gender": {
+                    "men": 1167380,
+                    "women": 2778930
+                },
+                "total": 3946310
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 2.6,
+                    "black_or_african_american": 4.4,
+                    "hispanic_or_latino": 4.2,
+                    "white_not_hispanic": 2.2
+                },
+                "by_gender": {
+                    "men": 3.0,
+                    "women": 2.5
+                },
+                "total": 2.6
+            }
+        },
+        "Social sciences": {
+            "earnings": {
+                "by_gender": {
+                    "men": 80526.0,
+                    "women": 57370.0
+                },
+                "total": 70197.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 247115,
+                    "black_or_african_american": 271525,
+                    "hispanic_or_latino": 241460,
+                    "white_not_hispanic": 2371535
+                },
+                "by_gender": {
+                    "men": 1762260,
+                    "women": 1434630
+                },
+                "total": 3196890
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 4.5,
+                    "black_or_african_american": 6.9,
+                    "hispanic_or_latino": 5.6,
+                    "white_not_hispanic": 3.7
+                },
+                "by_gender": {
+                    "men": 4.3,
+                    "women": 4.2
+                },
+                "total": 4.2
+            }
+        },
+        "Visual / performing arts": {
+            "earnings": {
+                "by_gender": {
+                    "men": 53917.0,
+                    "women": 46670.0
+                },
+                "total": 50484.0
+            },
+            "size": {
+                "by_ethnicity": {
+                    "asian": 116830,
+                    "black_or_african_american": 86095,
+                    "hispanic_or_latino": 114750,
+                    "white_not_hispanic": 1348100
+                },
+                "by_gender": {
+                    "men": 711995,
+                    "women": 984585
+                },
+                "total": 1696580
+            },
+            "unemployment": {
+                "by_ethnicity": {
+                    "asian": 5.4,
+                    "black_or_african_american": 7.9,
+                    "hispanic_or_latino": 7.2,
+                    "white_not_hispanic": 4.5
+                },
+                "by_gender": {
+                    "men": 5.6,
+                    "women": 4.7
+                },
+                "total": 5.0
+            }
+        }
+    }
+}
