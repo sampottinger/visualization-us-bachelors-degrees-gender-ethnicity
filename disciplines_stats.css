@@ -131,6 +131,10 @@ body {
   display: none;
 }
 
+#non-official-disclaimer {
+  font-weight: bold;
+}
+
 #title {
   font-weight: bold;
 }

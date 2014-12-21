@@ -6,7 +6,7 @@ Using US Census data, this visualization examines the gender and ethnic trends b
 
 This allows users to determine not just how many men achieved a degree in Literature, for example, but what percent of men nation-wide hold that degree and what percent of all graduates in the field are male.
 
-Note that this is not an official Google product and the views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. However, it was written, designed, and maintained by Googler [Sam Pottinger](http://gleap.org) (github: [samnsparky](https://github.com/Samnsparky)).
+Note that **this is not an official Google product** and the views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. However, it was written, designed, and maintained by Googler [Sam Pottinger](http://gleap.org) (github: [samnsparky](https://github.com/Samnsparky)).
 
 
 Technical stuff
