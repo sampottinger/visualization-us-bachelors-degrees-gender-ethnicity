@@ -32,10 +32,17 @@
       <div id="viz-padding"></div>
       <div id="visualization-holder">
         <div id="title-bar">
-          <h3 id="title"></h3>
           <div id="details-panel">
             <div id="instructions-details-panel">
-              Hover over a bar or piece of text for more details. Uses 2011 - 2012 American Community Survey from US Census.
+              <div id="instructions-top-panel" class="row">
+                <div class="col-md-3">
+                  <div class="instructions-head">Instructions:</div>
+                  Read the black column headers below. Hover over a bar or piece of text for more details.
+                </div>
+                <div class="col-md-3"><img src="./img/instructions_1.png"></div>
+                <div class="col-md-3"><img src="./img/instructions_2.png"></div>
+                <div class="col-md-3"><img src="./img/instructions_3.png"></div>
+              </div>
             </div>
             <div id="side-section-details-panel">
               <div class="display-panel-label" id="side-display-label"></div>
@@ -72,22 +79,23 @@
         <svg id="disciplines-vis-target" width="1140" height="670"></svg>
       </div>
       <div id="controls-holder">
+        <div id="title-holder">Currently showing: <span id="title"></span></div>
         <div class="row">
           <div class="col-md-4" id="which-panel">
             <div class="controls-header">Which numbers to use:</div>
             <div class="radio">
               <label>
-                <input type="radio" value="size" name="which" class="which-check" checked> How many working age people are employed by degree (workforce by degree)?
+                <input type="radio" value="size" name="which" class="which-check" checked> Number of people with degree (working age) that are employed
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" value="unemployment" name="which" class="which-check"> What are the unemployment rates by degree, gender, and ethnic group?
+                <input type="radio" value="unemployment" name="which" class="which-check"> Unemployment rates
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" value="earnings" name="which" class="which-check"> What is the median income by degree for men and women? *
+                <input type="radio" value="earnings" name="which" class="which-check"> Median income *
               </label>
             </div>
             <div class="notes" id="income-note">* = Income data currently only available by gender. See commentary below.</div>
@@ -102,12 +110,12 @@
             </div>
             <div class="radio">
               <label>
-                <input type="radio" value="percent" name="how" class="how-check"> Make all numbers relative to those with the same degree regardless of gender or ethnicity.
+                <input type="radio" value="percent" name="how" class="how-check"> Make all numbers relative to those with the same degree regardless of gender or ethnicity (ex: what percent of those with bachelor's degrees are men?).
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" value="percent_by_pop_group" name="how" class="how-check"> Make all numbers relative to those of the same gender or ethnicity regardless of degree. **
+                <input type="radio" value="percent_by_pop_group" name="how" class="how-check"> Make all numbers relative to those of the same gender or ethnicity regardless of degree (ex: what percent of men have bachelor's degrees?). **
               </label>
             </div>
             <div class="notes" id="by-group-note">** = Does not include information for unemployment. Cannot currently select this calculation option and unemployment at the same time.</div>
@@ -120,7 +128,7 @@
       <script src="./disciplines_stats.js"></script>
       <script>
         d3.json('./combined.json', onLoad);
-        $('#disciplines-vis-target').delay(800).slideDown();
+        $('#disciplines-vis-target').delay(1000).slideDown();
       </script>
       <div>
         <div class="write-up-section">

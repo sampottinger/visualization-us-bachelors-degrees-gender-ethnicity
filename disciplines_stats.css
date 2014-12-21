@@ -79,6 +79,10 @@ body {
   alignment-baseline: middle;
 }
 
+.page-header {
+  margin-bottom: 10px;
+}
+
 .write-up-header {
   font-weight: bold;
 }
@@ -111,8 +115,24 @@ body {
   font-size: 16px;
 }
 
+.instructions-head {
+  font-weight: bold;
+}
+
+#instructions-top-panel {
+  font-size: 14px;
+}
+
+#instructions-top-panel img {
+  height: 60px;
+}
+
 #middle-section-details-panel {
   display: none;
+}
+
+#title {
+  font-weight: bold;
 }
 
 #title.scrolled {
@@ -120,7 +140,7 @@ body {
 }
 
 #title-bar {
-  height: 115px;
+  height: 95px;
   border-bottom: 1px solid #EEE;
 }
 
@@ -134,8 +154,13 @@ body {
   z-index: 10;
 }
 
+#title-holder {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
 #viz-padding.scrolled {
-  height: 180px;
+  height: 155px;
 }
 
 @media (max-width: 993px) {

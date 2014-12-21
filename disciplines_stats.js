@@ -237,7 +237,7 @@ function createHeaders() {
   headerGroup.append('text')
     .attr('x', 0)
     .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET)
-    .text('Gender'); 
+    .text('All Bachelor\'s by Gender');
 
   headerGroup.append('rect')
     .attr('x', 0)
@@ -248,7 +248,7 @@ function createHeaders() {
   headerGroup.append('text')
     .attr('x', CHORD_SIZE + SECTION_WIDTH * 4)
     .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET)
-    .text('Ethnicity'); 
+    .text('All Bachelor\'s by Ethnicity');
 
   headerGroup.append('rect')
     .attr('x', CHORD_SIZE + SECTION_WIDTH * 4)
@@ -316,7 +316,7 @@ function createMenDisplay(data, metric, shouldCreateBottomBar,
         return SECTION_WIDTH * 2 - SECTION_PADDING - xCoord;
       })
       .attr('y', DISCIPLINE_HEIGHT / 2 - 5)
-      .attr('height', 5)
+      .attr('height', 7)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_gender']['men'];
         return scale(targetVal);
@@ -355,7 +355,7 @@ function createWomenDisplay(data, metric, shouldCreateBottomBar,
   bars.classed('metric-bar', true).transition()
       .attr('x', SECTION_WIDTH * 2)
       .attr('y', DISCIPLINE_HEIGHT / 2 - 5)
-      .attr('height', 5)
+      .attr('height', 7)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_gender']['women'];
         return scale(targetVal);
@@ -395,7 +395,7 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
   groups.selectAll('.white-bar').classed('metric-bar', true).transition()
       .attr('x', SECTION_WIDTH * 3 + ETHNICITY_BAR_PADDING)
       .attr('y', 3)
-      .attr('height', 5)
+      .attr('height', 4)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_ethnicity'];
         targetVal = targetVal['white_not_hispanic'];
@@ -405,7 +405,7 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
   groups.selectAll('.asian-bar').classed('metric-bar', true).transition()
       .attr('x', SECTION_WIDTH * 3 + ETHNICITY_BAR_PADDING)
       .attr('y', 11)
-      .attr('height', 5)
+      .attr('height', 4)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_ethnicity']['asian'];
         return scale(targetVal);
@@ -414,7 +414,7 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
   groups.selectAll('.black-bar').classed('metric-bar', true).transition()
       .attr('x', SECTION_WIDTH * 3 + ETHNICITY_BAR_PADDING)
       .attr('y', 19)
-      .attr('height', 5)
+      .attr('height', 4)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_ethnicity'];
         targetVal = targetVal['black_or_african_american'];
@@ -424,7 +424,7 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
   groups.selectAll('.hispanic-bar').classed('metric-bar', true).transition()
       .attr('x', SECTION_WIDTH * 3 + ETHNICITY_BAR_PADDING)
       .attr('y', 27)
-      .attr('height', 5)
+      .attr('height', 4)
       .attr('width', function(discipline) {
         var targetVal = discipline.value[metric]['by_ethnicity'];
         targetVal = targetVal['hispanic_or_latino'];
@@ -1094,12 +1094,10 @@ $(window).scroll(function() {
     $('#viz-padding').addClass('scrolled');
     $('.display-panel-caption').addClass('scrolled');
     $('.display-panel-label').addClass('scrolled');
-    $('#title').addClass('scrolled');
   } else {
     $('#title-bar').removeClass('scrolled');
     $('#viz-padding').removeClass('scrolled');
     $('.display-panel-caption').removeClass('scrolled');
     $('.display-panel-label').removeClass('scrolled');
-    $('#title').removeClass('scrolled');
   }
 });

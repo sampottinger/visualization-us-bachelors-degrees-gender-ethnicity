@@ -38,6 +38,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 Note that this is not an official Google product. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees.
 
+**Contributions**  
+Great! We will have to ask you to agree to a contributor license agreement:
+ - [Individual Agreement](https://cla.developers.google.com/about/google-individual)
+ - [Corporate Agreement](https://developers.google.com/open-source/cla/corporate)
+
 
 Humanities stuff
 ---------------

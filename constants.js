@@ -206,9 +206,9 @@ var GENDER_LABELS = d3.map({
  * @const
  */
 var TITLE_COMPONENTS = d3.map({
-    'size': 'Employed working age population by bachelor\'s degree',
-    'unemployment': 'Unemployment rate by bachelor\'s degree',
-    'earnings': 'Median income by bachelor\'s degree',
+    'size': 'Employed working age population by bachelor\'s degree held',
+    'unemployment': 'Unemployment rate by bachelor\'s degree by held',
+    'earnings': 'Median income by bachelor\'s degree held',
     'population': '.',
     'percent': ' relative to those with the degree.',
     'percent_by_pop_group': ' relative to those of the same gender / ethnicity.'
@@ -243,30 +243,30 @@ var DECIMAL_FORMATTER = d3.format('.2f');
 var MIDDLE_LABELS_SET = d3.map({
   'size': d3.map({
     'population': d3.map({
-      'men': 'Men with bachelor\'s degree',
-      'women': 'Women with bachelor\'s degree',
-      'white_not_hispanic': 'White persons with bachelor\'s degree',
-      'asian': 'Asian persons with bachelor\'s degree',
-      'black_or_african_american': 'Black persons with bachelor\'s degree',
-      'hispanic_or_latino': 'Hisp / Lat persons with bachelor\'s degree',
+      'men': 'Men with selected degree',
+      'women': 'Women with selected degree',
+      'white_not_hispanic': 'White persons with selected degree',
+      'asian': 'Asian persons with selected degree',
+      'black_or_african_american': 'Black persons with selected degree',
+      'hispanic_or_latino': 'Hisp / Lat persons with selected degree',
       'formatter': COMMA_FORMATTER
     }),
     'percent': d3.map({
-      'men': '% with degree are Men',
-      'women': '% with degree are Women',
-      'white_not_hispanic': '% with degree are White',
-      'asian': '% with degree are Asian',
-      'black_or_african_american': '% with degree are Black',
-      'hispanic_or_latino': '% with degree are Hisp / Lat',
+      'men': '% with selected degree are Men',
+      'women': '% with selected degree are Women',
+      'white_not_hispanic': '% with selected degree are White',
+      'asian': '% with selected degree are Asian',
+      'black_or_african_american': '% with selected degree are Black',
+      'hispanic_or_latino': '% with selected degree are Hisp / Lat',
       'formatter': DECIMAL_FORMATTER
     }),
     'percent_by_pop_group': d3.map({
-      'men': '% of Men have degree',
-      'women': '% of Women have degree',
-      'white_not_hispanic': '% of White pop have degree',
-      'asian': '% of Asian pop have degree',
-      'black_or_african_american': '% of Black pop have degree',
-      'hispanic_or_latino': '% of Hisp / Lat pop have degree',
+      'men': '% of Men have selected degree',
+      'women': '% of Women have selected degree',
+      'white_not_hispanic': '% of White pop have selected degree',
+      'asian': '% of Asian pop have selected degree',
+      'black_or_african_american': '% of Black pop have selected degree',
+      'hispanic_or_latino': '% of Hisp / Lat pop have selected degree',
       'formatter': DECIMAL_FORMATTER
     })
   }),
@@ -292,8 +292,8 @@ var MIDDLE_LABELS_SET = d3.map({
   }),
   'earnings': d3.map({
     'population': d3.map({
-      'men': 'USD for Men with degree',
-      'women': 'USD for Women with degree',
+      'men': 'USD for Men with selected degree',
+      'women': 'USD for Women with selected degree',
       'white_not_hispanic': '',
       'asian': '',
       'black_or_african_american': '',
@@ -415,7 +415,7 @@ var CHORD_LABELS_SET = d3.map({
  * Scroll region for top of visualization
  * @const
  */
-var SCROLL_TOP = 159;
+var SCROLL_TOP = 145;
 
 /**
  * Scroll region for bottom of visualization
