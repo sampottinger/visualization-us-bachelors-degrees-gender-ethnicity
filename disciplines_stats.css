@@ -26,6 +26,11 @@ body {
   fill: #D1D1D1;
 }
 
+.container {
+  width: 1140px;
+  max-width: none !important;
+}
+
 .controls-header {
   font-weight: bold;
 }
@@ -165,18 +170,4 @@ body {
 
 #viz-padding.scrolled {
   height: 155px;
-}
-
-@media (max-width: 993px) {
-  .controls-header {
-    margin-top: 30px;
-  }
-
-  #instructions-details-panel {
-    margin-top: 100px;
-  }
-
-  #title-bar {
-    display: hidden;
-  }
 }
