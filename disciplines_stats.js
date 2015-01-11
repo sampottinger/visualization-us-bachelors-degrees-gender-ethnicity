@@ -814,7 +814,7 @@ function attachMiddleListeners(selectionInfo) {
 
   resetStyling();
 
-  d3.selectAll('.discipline-group').on('mouseenter', function(datum) {
+  var mouseActivate = function(datum) {
     var groupSelection = d3.select(this);
     groupSelection.selectAll('.overview-text').attr('fill', 'black');
     groupSelection.selectAll('.metric-bar').attr('fill', 'black');
@@ -871,13 +871,19 @@ function attachMiddleListeners(selectionInfo) {
         })
         .attr('opacity', 1)
         .attr('stroke', 'black');
-  });
+  }
 
-  d3.selectAll('.discipline-group').on('mouseleave', function() {
+  d3.selectAll('.discipline-group').on('mouseenter', mouseActivate);
+
+  var mouseDeactivate = function() {
     $('#middle-section-details-panel').hide();
     $('#instructions-details-panel').show();
     resetStyling();
-  });
+  }
+
+  d3.selectAll('.discipline-group').on('mouseleave', mouseDeactivate);
+
+  d3.selectAll('.discipline-group').on('click', mouseActivate);
 }
 
 
