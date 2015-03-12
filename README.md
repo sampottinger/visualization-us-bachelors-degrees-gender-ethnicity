@@ -88,3 +88,5 @@ Anyway, despite some room for improvement, I hope this work takes a logical step
 
 **Who are you? Who did this?**  
 You can find more info about me and my past work at [my personal website](http://gleap.org). This was a self-direction personal (two) weekend project. So, it is not an official Google product. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. It is not an ongoing project but, given that I wrote it while employed at Google, the company retains the copyright (2014). That said, it is open source and hosted at github under the Apache 2 license.
+
+**Update on copyright** My employer (Google) has granted me the copyright to this project. That will be reflected in the codebase here shortly.
