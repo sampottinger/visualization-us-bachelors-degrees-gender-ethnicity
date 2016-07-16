@@ -80,26 +80,23 @@
               </div>
             </div>
           </div>
-          <svg id="disciplines-vis-target" width="1140" height="670"></svg>
           <div id="controls-holder">
+            <div id="currently-showing">Currently Showing: <span id="title"></span></div>
             <div class="row">
-              <div class="col-xs-2" id="which-panel">
-                <div>Currently Showing:</div>
-                <div id="title"></div>
-              </div>
-              <div class="col-xs-5" id="which-panel">
+              <div class="col-xs-6" id="which-panel">
                 <label><input type="radio" value="size" name="which" class="which-check" checked> Number of degree holders</label>
                 <label><input type="radio" value="unemployment" name="which" class="which-check"> Unemployment</label>
                 <label><input type="radio" value="earnings" name="which" class="which-check"> Median income *</label>
                 <div class="notes" id="income-note">* = Income data currently only available by gender. See commentary below.</div>
               </div>
-              <div class="col-xs-5" id="how-panel">
-                <label><input type="radio" value="population" name="how" class="how-check" checked> Total</label>
+              <div class="col-xs-6" id="how-panel">
+                <label><input type="radio" value="population" name="how" class="how-check" checked> Count</label>
                 <label><input type="radio" value="percent_by_pop_group" name="how" class="how-check"> % of Overall Population<label>
                 <label><input type="radio" value="percent" name="how" class="how-check"> % of Degree-Holders</label>
               </div>
             </div>
           </div>
+          <svg id="disciplines-vis-target" width="1140" height="670"></svg>
         </div>
         <script src="./bower_components/jquery/dist/jquery.min.js"></script>
         <script src="./bower_components/d3/d3.min.js"></script>

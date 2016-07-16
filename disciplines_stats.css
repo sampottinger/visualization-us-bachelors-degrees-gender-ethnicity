@@ -103,15 +103,18 @@ body {
 }
 
 #controls-holder {
-  border-bottom: 1px solid #EEE;
-  margin-bottom: 20px;
   padding: 15px 0;
-  border-top: 1px dotted #EEE;
+  border-bottom: 1px solid #ccc;
 }
 
 #controls-holder label {
   font-weight: normal;
   padding: 0 10px;
+}
+
+#currently-showing {
+  padding-bottom: 5px;
+  font-weight: bold;
 }
 
 #details-panel {
@@ -172,18 +175,14 @@ body {
   font-weight: bold;
 }
 
-#title {
-  font-weight: bold;
-}
-
 #title.scrolled {
   display: none !important;
 }
 
 #title-bar {
   height: 95px;
-  border-bottom: 1px dotted #EEE;
   border-top: 1px solid #ccc;
+  border-bottom: 1px dotted #ccc;
 }
 
 #title-bar.scrolled {

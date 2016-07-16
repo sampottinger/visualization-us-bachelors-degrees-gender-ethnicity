@@ -415,7 +415,7 @@ var CHORD_LABELS_SET = d3.map({
  * Scroll region for top of visualization
  * @const
  */
-var SCROLL_TOP = 145;
+var SCROLL_TOP = 100;
 
 /**
  * Scroll region for bottom of visualization
