@@ -164,8 +164,8 @@ describe('disciplines visualization', function() {
 
   it('creates inner display headers', function() {
     createHeaders();
-    expect(d3.selectAll('rect').size()).toEqual(6);
-    expect(d3.selectAll('text').size()).toEqual(6);
+    expect(d3.selectAll('rect').size()).toEqual(16);
+    expect(d3.selectAll('text').size()).toEqual(16);
   });
 
   it('create text for degrees / fields', function() {

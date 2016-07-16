@@ -62,13 +62,20 @@ var DISCIPLINE_HEIGHT = 40;
 var CHORD_GLYPH_HEADER_RECT_OFFSET = 10;
 
 /**
+ * Space to reserve for scale tick and label at top of visulization.
+ *
+ * @const
+ */
+var SCALE_PADDING = 7;
+
+/**
  * How many pixels in the x direction to separate sections in a discipline row.
  *
  * @const
  * By how many pixels to separate sections or "columns" in the table of
  * discipline statistics.
  */
-var SECTION_PADDING = 2;
+var SECTION_PADDING = 4;
 
 /**
  * Y axis offset for the text headers in the top of the table in pixels.
@@ -93,7 +100,7 @@ var ETHNICITY_BAR_PADDING = 60;
  *
  * @const
  */ 
-var TOTAL_HEIGHT = 670;
+var TOTAL_HEIGHT = 680;
 
 /**
  * Number of sections or "columns" in the visualization per discipline.
@@ -182,7 +189,7 @@ var ETHNICITY_ORDER = [
  */
 var ETHNICITY_LABELS = d3.map({
     'asian': 'Asian',
-    'black_or_african_american': 'Black, Afrcn Am.',
+    'black_or_african_american': 'Black, Af Am.',
     'hispanic_or_latino': 'Hispanic, Latino',
     'white_not_hispanic': 'White'
 });

@@ -7,14 +7,14 @@
  *
  * Copyright 2016 Sam Pottinger
  * 
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Licensed under the Apache License, Version 2.0 (the 'License');
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  * 
  *     http://www.apache.org/licenses/LICENSE-2.0
  * 
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
+ * distributed under the License is distributed on an 'AS IS' BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
@@ -48,7 +48,7 @@ function getDisciplineOrder(opt_disciplineOrder) {
  * Get the maximum value reported between the male and female values for a
  * given field or metric like unemployment.
  *
- * @param {string} field The name of the field (like "unemployment") to find the
+ * @param {string} field The name of the field (like 'unemployment') to find the
  *     maximum value for.
  * @param {d3.map} data The data in which to find the maximum value.
  * @param {Array<string>=} opt_disciplineOrder The order that the disciplines
@@ -76,7 +76,7 @@ function genderMax(field, data, opt_disciplineOrder) {
  * Get the maximum value reported by all ethnic groups for a given field or
  * metric like unemployment.
  *
- * @param {string} field The name of the field (like "unemployment") to find the
+ * @param {string} field The name of the field (like 'unemployment') to find the
  *     maximum value for.
  * @param {d3.map} data The data in which to find the maximum value.
  * @param {Array<string>=} opt_disciplineOrder The order that the disciplines
@@ -164,7 +164,7 @@ function createGroups(data) {
   createGroupElement('white-label', 'text');
 
   groups.attr('transform', function(discipline, i) {
-        var y = (i + 1) * DISCIPLINE_HEIGHT;
+        var y = (i + 1) * DISCIPLINE_HEIGHT + SCALE_PADDING;
         return 'translate(' + CHORD_SIZE + ', ' + y + ')';
       });
 
@@ -190,22 +190,84 @@ function createHeaders() {
    * @param {string} text The text to display within the header.
    * @param {number} sectionNum The 0th index of this header or, alternatively,
    *     the number of headers that preceded this header.
-   * @param {number} Manual offset in pixels to move the header.
+   * @param {number} opt_offset Optional manual offset in pixels to move the
+   *    header.
+   * @param {number} opt_scaleOffset Optional manual offset to move scale start
+   *    value.
+   * @param {boolean} opt_suppressScale Optional flag that if set to true will
+   *    prevent the rendering of the scale.
+   * @param {string} opt_maxID The ID to which the max label should be set.
+   * @param {string} opt_scaleClass The class to be assigned to scale elements.
    */
-  var createInnerHeader = function(text, sectionNum, opt_offset) {
-    if (opt_offset == undefined)
+  var createInnerHeader = function(text, sectionNum, opt_offset,
+    opt_suppressScale, opt_scaleOffset, opt_maxID, opt_scaleClass) {
+
+    if (opt_offset === undefined) {
       opt_offset = 0;
+    }
+
+    if (opt_suppressScale === undefined) {
+      opt_suppressScale = false;
+    }
+
+    if (opt_scaleOffset === undefined) {
+      opt_scaleOffset = 0;
+    }
+
+    if (opt_maxID === undefined) {
+      opt_maxID = '';
+    }
+
+    if (opt_scaleClass === undefined) {
+      opt_scaleClass = 'inner-scale';
+    }
+
+    var x = CHORD_SIZE + SECTION_WIDTH * sectionNum;
 
     headerGroup.append('text')
-        .attr('x', CHORD_SIZE + SECTION_WIDTH * sectionNum + opt_offset)
+        .attr('x', x + opt_offset)
         .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET)
         .text(text); 
 
     headerGroup.append('rect')
-        .attr('x', CHORD_SIZE + SECTION_WIDTH * sectionNum)
+        .attr('x', x)
         .attr('y', DISCIPLINE_HEIGHT / 2 + CHORD_GLYPH_HEADER_RECT_OFFSET)
         .attr('width', SECTION_WIDTH - SECTION_PADDING)
         .attr('height', 1);
+
+    if (!opt_suppressScale) {
+      headerGroup.append('text')
+        .attr('x', x + opt_scaleOffset)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+        .text('0')
+        .classed('scale-label', true)
+        .classed(opt_scaleClass, true);
+
+      headerGroup.append('rect')
+        .attr('x', x + opt_scaleOffset)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 20)
+        .attr('height', 2)
+        .attr('width', 1)
+        .classed(opt_scaleClass, true)
+        .classed('scale-tick', true);
+
+      headerGroup.append('text')
+        .attr('x', x + SECTION_WIDTH - SECTION_PADDING * 2)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+        .text('Max')
+        .classed('scale-label', true)
+        .classed('right-hard', true)
+        .classed(opt_scaleClass, true)
+        .attr('id', opt_maxID);
+
+      headerGroup.append('rect')
+        .attr('x', x + SECTION_WIDTH - SECTION_PADDING * 2)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 20)
+        .attr('height', 2)
+        .attr('width', 1)
+        .classed(opt_scaleClass, true)
+        .classed('scale-tick', true);
+    }
   };
 
   /**
@@ -214,11 +276,35 @@ function createHeaders() {
    * @param {string} text The text to display within the header.
    * @param {number} The 0th index of this header or, alternatively,
    *     the number of headers that preceded this header.
-   * @param {number} Manual offset in pixels to move the header.
+   * @param {number} opt_offset Optional manual offset in pixels to move the
+   *    header.
+   * @param {boolean} opt_suppressScale Optional flag that if set to true will
+   *    prevent the rendering of the scale.
+   * @param {string} opt_maxID The ID to which the max label should be set.
+   * @param {string} opt_scaleClass The class to be assigned to scale elements.
    */
-  var createInnerHeaderRight = function(text, sectionNum, opt_offset) {
-    if (opt_offset == undefined)
+  var createInnerHeaderRight = function(text, sectionNum, opt_offset,
+    opt_suppressScale, opt_scaleOffset, opt_maxID, opt_scaleClass) {
+    
+    if (opt_offset === undefined) {
       opt_offset = 0;
+    }
+
+    if (opt_suppressScale === undefined) {
+      opt_suppressScale = false;
+    }
+
+    if (opt_scaleOffset === undefined) {
+      opt_scaleOffset = 0;
+    }
+
+    if (opt_maxID === undefined) {
+      opt_maxID = '';
+    }
+
+    if (opt_scaleClass === undefined) {
+      opt_scaleClass = 'inner-scale';
+    }
 
     var nextSect = sectionNum + 1;
     headerGroup.append('text')
@@ -229,39 +315,171 @@ function createHeaders() {
           CHORD_SIZE + SECTION_WIDTH * nextSect - SECTION_PADDING + opt_offset
       );
 
+    var x = CHORD_SIZE + SECTION_WIDTH * sectionNum;
+
     headerGroup.append('rect')
-        .attr('x', CHORD_SIZE + SECTION_WIDTH * sectionNum)
+        .attr('x', x)
         .attr('y', DISCIPLINE_HEIGHT / 2 + CHORD_GLYPH_HEADER_RECT_OFFSET)
         .attr('width', SECTION_WIDTH - SECTION_PADDING)
         .attr('height', 1);
+
+
+    if (!opt_suppressScale) {
+      headerGroup.append('text')
+        .attr('x', x + opt_scaleOffset)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+        .text('Max')
+        .classed('scale-label', true)
+        .classed(opt_scaleClass, true)
+        .attr('id', opt_maxID);
+
+      headerGroup.append('rect')
+        .attr('x', x + opt_scaleOffset)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 20)
+        .attr('height', 2)
+        .attr('width', 1)
+        .classed(opt_scaleClass, true)
+        .classed('scale-tick', true);
+
+      headerGroup.append('text')
+        .attr('x', x + SECTION_WIDTH - SECTION_PADDING * 2)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+        .text('0')
+        .classed('scale-label', true)
+        .classed('right-hard', true)
+        .classed(opt_scaleClass, true);
+
+      headerGroup.append('rect')
+        .attr('x', x + SECTION_WIDTH - SECTION_PADDING * 2)
+        .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 20)
+        .attr('height', 2)
+        .attr('width', 1)
+        .classed(opt_scaleClass, true)
+        .classed('scale-tick', true);
+    }
   };
 
+  // Left side totals
   headerGroup.append('text')
     .attr('x', 0)
     .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET)
     .text('All Bachelor\'s by Gender');
 
+  headerGroup.append('text')
+    .attr('x', 0)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+    .text('Max')
+    .classed('scale-label', true)
+    .classed('gender-scale', true)
+    .attr('id', 'max-total-gender');
+
+  headerGroup.append('rect')
+    .attr('x', 0)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 21)
+    .attr('height', 2)
+    .attr('width', 1)
+    .classed('gender-scale', true)
+    .classed('scale-tick', true);
+
+  headerGroup.append('text')
+    .attr('x', CHORD_GLYPH_SIZE)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+    .text('0')
+    .classed('scale-label', true)
+    .classed('gender-scale', true)
+    .classed('right', true)
+    .attr('id', 'min-total-gender');
+
+  headerGroup.append('rect')
+    .attr('x', CHORD_GLYPH_SIZE)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 21)
+    .attr('height', 2)
+    .attr('width', 1)
+    .classed('gender-scale', true)
+    .classed('scale-tick', true);
+
   headerGroup.append('rect')
     .attr('x', 0)
     .attr('y', DISCIPLINE_HEIGHT / 2 + CHORD_GLYPH_HEADER_RECT_OFFSET)
     .attr('width', CHORD_SIZE - SECTION_PADDING)
     .attr('height', 1);
 
+  // Right side totals
   headerGroup.append('text')
     .attr('x', CHORD_SIZE + SECTION_WIDTH * 4)
     .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET)
     .text('All Bachelor\'s by Ethnicity');
 
+  headerGroup.append('text')
+    .attr('x', CHORD_SIZE * 2 + SECTION_WIDTH * 4)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+    .text('Max')
+    .classed('scale-label', true)
+    .classed('right-hard', true)
+    .classed('ethnicity-scale', true)
+    .attr('id', 'max-total-ethnicity');
+
+  headerGroup.append('rect')
+    .attr('x', CHORD_SIZE * 2 + SECTION_WIDTH * 4)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 21)
+    .attr('height', 2)
+    .attr('width', 1)
+    .classed('ethnicity-scale', true)
+    .classed('scale-tick', true);
+
+  headerGroup.append('text')
+    .attr('x', CHORD_SIZE * 2 + SECTION_WIDTH * 4 - CHORD_GLYPH_SIZE)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 17)
+    .text('0')
+    .classed('scale-label', true)
+    .classed('ethnicity-scale', true)
+    .attr('id', 'min-total-ethnicity');
+
+  headerGroup.append('rect')
+    .attr('x', CHORD_SIZE * 2 + SECTION_WIDTH * 4 - CHORD_GLYPH_SIZE)
+    .attr('y', DISCIPLINE_HEIGHT / 2 + HEADER_TEXT_OFFSET + 21)
+    .attr('height', 2)
+    .attr('width', 1)
+    .classed('ethnicity-scale', true)
+    .classed('scale-tick', true);
+
   headerGroup.append('rect')
     .attr('x', CHORD_SIZE + SECTION_WIDTH * 4)
     .attr('y', DISCIPLINE_HEIGHT / 2 + CHORD_GLYPH_HEADER_RECT_OFFSET)
-    .attr('width', CHORD_SIZE - SECTION_PADDING)
+    .attr('width', CHORD_SIZE)
     .attr('height', 1);
 
-  createInnerHeader('Degree', 0);
-  createInnerHeaderRight('Men with Degree', 1, -10);
-  createInnerHeader('Women with Degree', 2, 10);
-  createInnerHeader('Degree by Ethnicity', 3);
+  createInnerHeader('Degree', 0, 0, true);
+  
+  createInnerHeaderRight(
+    'Men with Degree',
+    1,
+    -10,
+    0,
+    false,
+    'men-inner-max',
+    'men-scale'
+  );
+  
+  createInnerHeader(
+    'Women with Degree',
+    2,
+    10,
+    0,
+    false,
+    'woman-inner-max',
+    'woman-scale'
+  );
+  
+  createInnerHeader(
+    'Degree by Ethnicity',
+    3,
+    0,
+    false,
+    ETHNICITY_BAR_PADDING,
+    'ethnicity-inner-max',
+    'ethnicity-scale'
+  );
 }
 
 
@@ -302,6 +520,8 @@ function createMenDisplay(data, metric, shouldCreateBottomBar,
     opt_disciplineOrder) {
 
   var fieldMax = genderMax(metric, data, opt_disciplineOrder);
+
+  d3.select('#men-inner-max').text(formatShortString(fieldMax));
 
   var groups = d3.selectAll('.discipline-group');
 
@@ -348,6 +568,8 @@ function createWomenDisplay(data, metric, shouldCreateBottomBar,
 
   var fieldMax = genderMax(metric, data, opt_disciplineOrder);
 
+  d3.select("#woman-inner-max").text(formatShortString(fieldMax));
+
   var scale = d3.scale.linear()
       .domain([0, fieldMax])
       .range([0, SECTION_WIDTH - SECTION_PADDING]);
@@ -389,6 +611,8 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
   var groups = d3.selectAll('.discipline-group');
 
   var fieldMax = ethnicityMax(metric, data, opt_disciplineOrder);
+
+  d3.select("#ethnicity-inner-max").text(formatShortString(fieldMax));
 
   var scale = d3.scale.linear()
       .domain([0, fieldMax])
@@ -483,19 +707,19 @@ function createEthnicityDisplay(data, metric, shouldCreateBottomBar,
  *     side of the graph.
  * @param {string} dataSlice Which method behind the grouping of data points the
  *     chord diagram is showing (by gender or ethnicity).
- * @param {d3.map} Mapping from the name of the "join key" (male, female, asian,
+ * @param {d3.map} Mapping from the name of the 'join key' (male, female, asian,
  *     etc) to the percent offset from the top of the display for that category.
- *     For example, if "asian" has an offset of 0.6, it will be placed 0.6 * 
+ *     For example, if 'asian' has an offset of 0.6, it will be placed 0.6 * 
  *     visualization height from the top of the visualization. The bar chart and
  *     label for that category will be placed at that location and the chord
  *     for that category will connect to that location.
- * @param {string} direction The "direction" of the chord represented as a
- *     string "right" or "left". 
+ * @param {string} direction The 'direction' of the chord represented as a
+ *     string 'right' or 'left'. 
  */
 function createFlow(data, metric, leftJoinKeys, rightJoinKeys, dataSlice,
-    joinKeyPlacements, direction, target, labels) {
+    joinKeyPlacements, direction, target, labels, maxLabel) {
 
-  // Create bars for the "totals" (metric value for gender or ethnicity across
+  // Create bars for the 'totals' (metric value for gender or ethnicity across
   // all degree types).
   var byTotals = data.get('Total')[metric][dataSlice];
 
@@ -506,9 +730,12 @@ function createFlow(data, metric, leftJoinKeys, rightJoinKeys, dataSlice,
     return {value: totalVal, key: leftJoinKeys[i]};
   });
 
+  var maxValue = d3.max(totalVals);
   var totalsScale = d3.scale.linear()
-      .domain([0, d3.max(totalVals)])
+      .domain([0, maxValue])
       .range([0, CHORD_GLYPH_SIZE]);
+
+  d3.select(maxLabel).text(formatShortString(maxValue));
 
   var targetSelect = d3.select(target);
 
@@ -626,7 +853,7 @@ function createFlow(data, metric, leftJoinKeys, rightJoinKeys, dataSlice,
 
         width = endX - startX;
         startY = TOTAL_HEIGHT * joinKeyPlacements.get(joinInfo.joinKey);
-        endY = (joinInfo.i + 1) * DISCIPLINE_HEIGHT + DISCIPLINE_HEIGHT / 3;
+        endY = (joinInfo.i + 1) * DISCIPLINE_HEIGHT + DISCIPLINE_HEIGHT / 3 + SCALE_PADDING;
         controlX1 = startX + width * 0.2;
         controlX2 = startX + width * 0.8;
 
@@ -695,8 +922,11 @@ function createGenderFlow(data, metric) {
       GENDER_CHORD_PLACEMENT,
       'left',
       '.left-flow-group',
-      GENDER_LABELS
+      GENDER_LABELS,
+      '#max-total-gender'
   );
+
+
 }
 
 
@@ -717,7 +947,8 @@ function createEthnicityFlow(data, metric) {
       ETHNICITY_PLACEMENT,
       'right',
       '.right-flow-group',
-      ETHNICITY_LABELS
+      ETHNICITY_LABELS,
+      '#max-total-ethnicity'
   );
 }
 
@@ -740,6 +971,7 @@ function hideEthnicityDisplay() {
   groups.selectAll('.hispanic-label').transition().attr('opacity', 0);
 
   d3.selectAll('.right-flow-group').transition().attr('opacity', 0);
+  d3.selectAll('.ethnicity-scale').transition().attr('opacity', 0);
 }
 
 
@@ -761,6 +993,7 @@ function showEthnicityDisplay() {
   groups.selectAll('.hispanic-label').attr('opacity', 1);
 
   d3.selectAll('.right-flow-group').attr('opacity', 1);
+  d3.selectAll('.ethnicity-scale').transition().attr('opacity', 1);
 }
 
 
@@ -774,9 +1007,9 @@ function showEthnicityDisplay() {
  *     is currently displaying (unemployment, income, etc.).
  * @param {string} selectedCal The name of the method used to calculate the
  *     numbers being displayed in the visualization. Can be raw numbers
- *     ("population"), numbers relative to the population by degree ("percent"),
+ *     ('population'), numbers relative to the population by degree ('percent'),
  *     or relative to the population by gender / ethnicity
- *     ("percent_by_pop_group").
+ *     ('percent_by_pop_group').
  */
 function updateTitle(selectedMetric, selectedCalc) {
   var metricText = TITLE_COMPONENTS.get(selectedMetric);
@@ -980,9 +1213,9 @@ function onLoad(error, rawData) {
     calc: 'population'
   };
 
-  $("#start-link").click(function() {
-    $("#overall-header").slideUp();
-    $("#post-intro-contents").fadeIn();
+  $('#start-link').click(function() {
+    $('#overall-header').slideUp();
+    $('#post-intro-contents').fadeIn();
     started = true;
   });
 
@@ -1009,9 +1242,9 @@ function onLoad(error, rawData) {
    * @param {string} selectedMetric The name of the metric selected by the user.
    *     Examples include size, unemployment, earnings.
    * @param {string} selectedCalc The name of the calculation method selected by
-   *     the user. Can be raw numbers ("population"), numbers relative to the
-   *     population by degree ("percent"), or relative to the population by
-   *     gender / ethnicity ("percent_by_pop_group").
+   *     the user. Can be raw numbers ('population'), numbers relative to the
+   *     population by degree ('percent'), or relative to the population by
+   *     gender / ethnicity ('percent_by_pop_group').
    */
   var updateDisplay = function(selectedMetric, selectedCalc) {
     var selectedMetric = $('.which-check:checked').val();
@@ -1052,9 +1285,9 @@ function onLoad(error, rawData) {
    * @param {string} selectedMetric The name of the metric selected by the user.
    *     Examples include size, unemployment, earnings.
    * @param {string} selectedCalc The name of the calculation method selected by
-   *     the user. Can be raw numbers ("population"), numbers relative to the
-   *     population by degree ("percent"), or relative to the population by
-   *     gender / ethnicity ("percent_by_pop_group").
+   *     the user. Can be raw numbers ('population'), numbers relative to the
+   *     population by degree ('percent'), or relative to the population by
+   *     gender / ethnicity ('percent_by_pop_group').
    */
   var updateDisplayCheckMetric = function(selectedMetric, selectedCalc) {
     var selectedMetric = $('.which-check:checked').val();
@@ -1066,9 +1299,9 @@ function onLoad(error, rawData) {
     }
 
     if (selectedMetric === 'unemployment') {
-      $('.how-check[value="percent_by_pop_group"]').attr('disabled', true);
+      $(".how-check[value='percent_by_pop_group']").attr('disabled', true);
     } else {
-      $('.how-check[value="percent_by_pop_group"]').attr('disabled', false);
+      $(".how-check[value='percent_by_pop_group']").attr('disabled', false);
     }
 
     updateDisplay();
@@ -1085,19 +1318,19 @@ function onLoad(error, rawData) {
    * @param {string} selectedMetric The name of the metric selected by the user.
    *     Examples include size, unemployment, earnings.
    * @param {string} selectedCalc The name of the calculation method selected by
-   *     the user. Can be raw numbers ("population"), numbers relative to the
-   *     population by degree ("percent"), or relative to the population by
-   *     gender / ethnicity ("percent_by_pop_group").
+   *     the user. Can be raw numbers ('population'), numbers relative to the
+   *     population by degree ('percent'), or relative to the population by
+   *     gender / ethnicity ('percent_by_pop_group').
    */
   var updateDisplayCheckCalc = function() {
     var selectedCalc = $('.how-check:checked').val();
 
     if (selectedCalc === 'percent_by_pop_group') {
       $('#by-group-note').css('color', 'black');
-      $('.which-check[value="unemployment"]').attr('disabled', true);
+      $(".which-check[value='unemployment']").attr('disabled', true);
     } else {
       $('#by-group-note').css('color', '#838383');
-      $('.which-check[value="unemployment"]').attr('disabled', false);
+      $(".which-check[value='unemployment']").attr('disabled', false);
     }
 
     updateDisplay();
@@ -1132,3 +1365,14 @@ $(window).scroll(function() {
     $('.display-panel-label').removeClass('scrolled');
   }
 });
+
+
+function formatShortString(number) {
+  if (number > 1000000) {
+    return d3.format('.2g')(number / 1000000.0) + 'M';
+  } else if (number > 1000) {
+    return d3.format('.2g')(number / 1000.0) + 'K';
+  } else {
+    return number;
+  }
+}
