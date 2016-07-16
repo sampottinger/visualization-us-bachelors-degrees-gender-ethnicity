@@ -4,7 +4,7 @@
  * Constants for a college majors visualization that define spacing, sizing,
  * ordering, and labeling.
  *
- * Copyright 2014 Google Inc.
+ * Copyright 2016 Sam Pottinger
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

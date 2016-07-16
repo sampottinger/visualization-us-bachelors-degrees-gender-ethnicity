@@ -6,7 +6,7 @@ Using US Census data, this visualization examines the gender and ethnic trends b
 
 This allows users to determine not just how many men achieved a degree in Literature, for example, but what percent of men nation-wide hold that degree and what percent of all graduates in the field are male.
 
-Note that **this is not an official Google product** and the views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. However, it was written, designed, and maintained by Googler [Sam Pottinger](http://gleap.org) (github: [samnsparky](https://github.com/Samnsparky)).
+Note that **this is not an official Google product** and the views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. However, it was written, designed, and maintained by (now-ex) Googler [Sam Pottinger](http://gleap.org) (github: [samnsparky](https://github.com/Samnsparky)).
 
 
 Technical stuff
@@ -28,7 +28,7 @@ Exchange "port" with the port your local server is running on.
  - [jQuery](http://jquery.com/) ([MIT](https://jquery.org/license/), [jQuery Foundation](https://jquery.org/)). [Docs for jQuery](http://learn.jquery.com/).
 
 **License**  
-Copyright 2014 Google Inc.
+Copyright 2016 Sam Pottinger.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -87,6 +87,6 @@ While this project hopes to eventually draw data directly from an API published 
 Anyway, despite some room for improvement, I hope this work takes a logical step in those long lines of thought within visualization science. All that said, these design considerations and the overall visual structure are very unlikely to suit general purpose visualization and the their tools. Some trade-offs were made in regards to the dynamics of this very specific dataset.
 
 **Who are you? Who did this?**  
-You can find more info about me and my past work at [my personal website](http://gleap.org). This was a self-direction personal (two) weekend project. So, it is not an official Google product. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees. It is not an ongoing project but, given that I wrote it while employed at Google, the company retains the copyright (2014). That said, it is open source and hosted at github under the Apache 2 license.
+You can find more info about me and my past work at [my personal website](http://gleap.org). This was a self-direction personal (two) weekend project. So, it is not an official Google product. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees.
 
-**Update on copyright** My employer (Google) has granted me the copyright to this project. That will be reflected in the codebase here shortly.
+**Update on copyright** My (now former) employer (Google) has granted me the copyright to this project.

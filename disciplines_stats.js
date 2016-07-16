@@ -5,7 +5,7 @@
  * bachelor's degree as well as how those people fare after finishing. The
  * visualization examines these trends by gender and ethnicity.
  *
- * Copyright 2014 Google Inc.
+ * Copyright 2016 Sam Pottinger
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
