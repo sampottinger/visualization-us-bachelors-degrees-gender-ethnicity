@@ -84,8 +84,13 @@ body {
   alignment-baseline: middle;
 }
 
-.page-header {
-  margin-bottom: 10px;
+.overall-header {
+  margin: 100px 0 200px 0;
+  font-size: 16px;
+}
+
+.overall-header h1 {
+  font-size: 35px;
 }
 
 .write-up-header {
@@ -99,10 +104,14 @@ body {
 
 #controls-holder {
   border-bottom: 1px solid #EEE;
-  border-top: 1px solid #EEE;
   margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 50px;
+  padding: 15px 0;
+  border-top: 1px dotted #EEE;
+}
+
+#controls-holder label {
+  font-weight: normal;
+  padding: 0 10px;
 }
 
 #details-panel {
@@ -124,6 +133,10 @@ body {
   font-weight: bold;
 }
 
+#income-note {
+  padding-left: 15px;
+}
+
 #instructions-top-panel {
   font-size: 14px;
 }
@@ -132,11 +145,30 @@ body {
   height: 60px;
 }
 
+#intro {
+  padding: 20px 0;
+}
+
 #middle-section-details-panel {
   display: none;
 }
 
 #non-official-disclaimer {
+  font-weight: bold;
+}
+
+#post-intro-contents {
+  display: none;
+}
+
+#report {
+  margin-top: 100px;
+}
+
+#start-link {
+  text-decoration: underline;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite; 
   font-weight: bold;
 }
 
@@ -150,7 +182,8 @@ body {
 
 #title-bar {
   height: 95px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px dotted #EEE;
+  border-top: 1px solid #ccc;
 }
 
 #title-bar.scrolled {
@@ -160,6 +193,7 @@ body {
   top: 0;
   height: 75px;
   border-bottom: 1px solid #ccc;
+  border-top: none;
   z-index: 10;
 }
 
@@ -170,4 +204,11 @@ body {
 
 #viz-padding.scrolled {
   height: 155px;
+}
+
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.5;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.5;}
 }

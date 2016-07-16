@@ -207,11 +207,11 @@ var GENDER_LABELS = d3.map({
  */
 var TITLE_COMPONENTS = d3.map({
     'size': 'Employed working age population by bachelor\'s degree held',
-    'unemployment': 'Unemployment rate by bachelor\'s degree by held',
+    'unemployment': 'Unemployment rate by bachelor\'s degree held',
     'earnings': 'Median income by bachelor\'s degree held',
     'population': '.',
-    'percent': ' relative to those with the degree.',
-    'percent_by_pop_group': ' relative to those of the same gender / ethnicity.'
+    'percent': ' as % of all degree holders.',
+    'percent_by_pop_group': ' as % of overall population.'
 });
 
 /**

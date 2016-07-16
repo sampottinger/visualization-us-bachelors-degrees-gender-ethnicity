@@ -22,6 +22,8 @@
  * @author Sam Pottinger
  */
 
+var started = false;
+
 
 /**
  * Get the default discipline order if not provided.
@@ -978,6 +980,12 @@ function onLoad(error, rawData) {
     calc: 'population'
   };
 
+  $("#start-link").click(function() {
+    $("#overall-header").slideUp();
+    $("#post-intro-contents").fadeIn();
+    started = true;
+  });
+
   createGroups(popData);
   createFlowGroups();
   createHeaders();
@@ -1112,7 +1120,7 @@ $(window).scroll(function() {
   var inRegion = scrollLoc > SCROLL_TOP;
   inRegion = inRegion && scrollLoc < SCROLL_BOTTOM
 
-  if(inRegion) {
+  if(inRegion && started) {
     $('#title-bar').addClass('scrolled');
     $('#viz-padding').addClass('scrolled');
     $('.display-panel-caption').addClass('scrolled');

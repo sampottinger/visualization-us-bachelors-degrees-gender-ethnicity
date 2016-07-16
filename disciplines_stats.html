@@ -26,176 +26,156 @@
   </head>
   <body>
     <div class="container">
-      <div class="page-header">
-        <h1>Visualization of US Bachelor's Degrees by Gender and Ethnic Diversity</h1>
+      <div class="overall-header" id="overall-header">
+        <h1>What do different genders and ethnicities<br>study in college and what are their post-graduation outcomes?</h1>
+        <p id="intro"><span class="question">What are the men and women of America studying in college and how do their outcomes differ based on their degree, gender, and ethnicity?</span> Through the lens of gender and ethnicity, this visualization of US bachelor's degrees examines achievement and outcome in terms of unemployment and median income.</p>
+        <p><a id="start-link" href="#">Next >></a>
       </div>
-      <div id="viz-padding"></div>
-      <div id="visualization-holder">
-        <div id="title-bar">
-          <div id="details-panel">
-            <div id="instructions-details-panel">
-              <div id="instructions-top-panel" class="row">
-                <div class="col-xs-3">
-                  <div class="instructions-head">Instructions:</div>
-                  Read the black column headers below. Hover over a bar or piece of text for more details.
+      <div id="post-intro-contents">
+        <h1>Visualization of US Bachelors Degrees by Gender and Ethnicity</h1>
+        <div id="viz-padding"></div>
+        <div id="visualization-holder">
+          <div id="title-bar">
+            <div id="details-panel">
+              <div id="instructions-details-panel">
+                <div id="instructions-top-panel" class="row">
+                  <div class="col-xs-3">
+                    <div class="instructions-head">Instructions:</div>
+                    Hover over a bar or piece of text for more details. Use radio buttons to change data.
+                  </div>
+                  <div class="col-xs-3"><img src="./img/instructions_1.png"></div>
+                  <div class="col-xs-3"><img src="./img/instructions_2.png"></div>
+                  <div class="col-xs-3"><img src="./img/instructions_3.png"></div>
                 </div>
-                <div class="col-xs-3"><img src="./img/instructions_1.png"></div>
-                <div class="col-xs-3"><img src="./img/instructions_2.png"></div>
-                <div class="col-xs-3"><img src="./img/instructions_3.png"></div>
+              </div>
+              <div id="side-section-details-panel">
+                <div class="display-panel-label" id="side-display-label"></div>
+                <div class="display-panel-caption" id="side-display-caption"></div>
+              </div>
+              <div id="middle-section-details-panel" class="row">
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="men-display-label"></div>
+                  <div class="display-panel-caption" id="men-display-caption"></div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="women-display-label"></div>
+                  <div class="display-panel-caption" id="women-display-caption"></div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="white-display-label"></div>
+                  <div class="display-panel-caption" id="white-display-caption"></div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="asian-display-label"></div>
+                  <div class="display-panel-caption" id="asian-display-caption"></div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="black-display-label"></div>
+                  <div class="display-panel-caption" id="black-display-caption"></div>
+                </div>
+                <div class="col-xs-2">
+                  <div class="display-panel-label" id="hisp-display-label"></div>
+                  <div class="display-panel-caption" id="hisp-display-caption"></div>
+                </div>
               </div>
             </div>
-            <div id="side-section-details-panel">
-              <div class="display-panel-label" id="side-display-label"></div>
-              <div class="display-panel-caption" id="side-display-caption"></div>
-            </div>
-            <div id="middle-section-details-panel" class="row">
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="men-display-label"></div>
-                <div class="display-panel-caption" id="men-display-caption"></div>
+          </div>
+          <svg id="disciplines-vis-target" width="1140" height="670"></svg>
+          <div id="controls-holder">
+            <div class="row">
+              <div class="col-xs-2" id="which-panel">
+                <div>Currently Showing:</div>
+                <div id="title"></div>
               </div>
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="women-display-label"></div>
-                <div class="display-panel-caption" id="women-display-caption"></div>
+              <div class="col-xs-5" id="which-panel">
+                <label><input type="radio" value="size" name="which" class="which-check" checked> Number of degree holders</label>
+                <label><input type="radio" value="unemployment" name="which" class="which-check"> Unemployment</label>
+                <label><input type="radio" value="earnings" name="which" class="which-check"> Median income *</label>
+                <div class="notes" id="income-note">* = Income data currently only available by gender. See commentary below.</div>
               </div>
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="white-display-label"></div>
-                <div class="display-panel-caption" id="white-display-caption"></div>
-              </div>
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="asian-display-label"></div>
-                <div class="display-panel-caption" id="asian-display-caption"></div>
-              </div>
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="black-display-label"></div>
-                <div class="display-panel-caption" id="black-display-caption"></div>
-              </div>
-              <div class="col-xs-2">
-                <div class="display-panel-label" id="hisp-display-label"></div>
-                <div class="display-panel-caption" id="hisp-display-caption"></div>
+              <div class="col-xs-5" id="how-panel">
+                <label><input type="radio" value="population" name="how" class="how-check" checked> Total</label>
+                <label><input type="radio" value="percent_by_pop_group" name="how" class="how-check"> % of Overall Population<label>
+                <label><input type="radio" value="percent" name="how" class="how-check"> % of Degree-Holders</label>
               </div>
             </div>
           </div>
         </div>
-        <svg id="disciplines-vis-target" width="1140" height="670"></svg>
-      </div>
-      <div id="controls-holder">
-        <div id="title-holder">Currently showing: <span id="title"></span></div>
-        <div class="row">
-          <div class="col-xs-4" id="which-panel">
-            <div class="controls-header">Which numbers to use:</div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="size" name="which" class="which-check" checked> Number of people with degree (working age) that are employed
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="unemployment" name="which" class="which-check"> Unemployment rates
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="earnings" name="which" class="which-check"> Median income *
-              </label>
-            </div>
-            <div class="notes" id="income-note">* = Income data currently only available by gender. See commentary below.</div>
+        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="./bower_components/d3/d3.min.js"></script>
+        <script src="./constants.js"></script>
+        <script src="./disciplines_stats.js"></script>
+        <script>
+          d3.json('./combined.json', onLoad);
+          $('#disciplines-vis-target').delay(1000).slideDown();
+        </script>
+        <div id="report">
+          <div class="write-up-section">
+            <div class="write-up-header">What is this?</div>
+            <div class="write-up-contents">Using US Census data, this visualization examines the gender and ethnic trends behind college degrees and the outcomes for graduates. This analysis not only offers a raw insight into the number of degree holders, employment, and median income but also scales those numbers proportional to
+            <ul>
+               <li>the national populations of the overall gender and ethnic groups examined</li>
+               <li>the populations that achieved the same degrees</li>
+            </ul>
+            This allows users to determine not just how many men achieved a degree in Literature, for example, but what percent of men nation-wide hold that degree and what percent of all graduates in the field are male. Written, designed, and maintained by <a href="http://gleap.org">Sam Pottinger</a> as a two weekend personal project.</div>
           </div>
-          <div class="col-xs-1"></div>
-          <div class="col-xs-4" id="how-panel">
-            <div class="controls-header">How to calculate the numbers:</div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="population" name="how" class="how-check" checked> Use raw numbers.
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="percent" name="how" class="how-check"> Make all numbers relative to those with the same degree regardless of gender or ethnicity (ex: what percent of those with bachelor's degrees are men?).
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" value="percent_by_pop_group" name="how" class="how-check"> Make all numbers relative to those of the same gender or ethnicity regardless of degree (ex: what percent of men have bachelor's degrees?). **
-              </label>
-            </div>
-            <div class="notes" id="by-group-note">** = Does not include information for unemployment. Cannot currently select this calculation option and unemployment at the same time.</div>
-          </div>
-        </div>
-      </div>
-      <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="./bower_components/d3/d3.min.js"></script>
-      <script src="./constants.js"></script>
-      <script src="./disciplines_stats.js"></script>
-      <script>
-        d3.json('./combined.json', onLoad);
-        $('#disciplines-vis-target').delay(1000).slideDown();
-      </script>
-      <div>
-        <div class="write-up-section">
-          <div class="write-up-header">What is this?</div>
-          <div class="write-up-contents">Using US Census data, this visualization examines the gender and ethnic trends behind college degrees and the outcomes for graduates. This analysis not only offers a raw insight into the number of degree holders, employment, and median income but also scales those numbers proportional to
-          <ul>
-             <li>the national populations of the overall gender and ethnic groups examined</li>
-             <li>the populations that achieved the same degrees</li>
-          </ul>
-          This allows users to determine not just how many men achieved a degree in Literature, for example, but what percent of men nation-wide hold that degree and what percent of all graduates in the field are male. Written, designed, and maintained by <a href="http://gleap.org">Sam Pottinger</a> as a two weekend personal project.</div>
-        </div>
-        <div class="write-up-section">
-          <div class="write-up-header">What did you learn?</div>
-          <div class="write-up-contents">
-            <p>This visualization underscores an unavoidable complexity in discussing educational background and post-college outcomes. Even in the broad scope of the US Census, the data, like truth, resist simplicity (Green).</p> 
-            <p>Let's take some examples... While this visualization highlights similarity between genders in overall educational attainment, some degrees like "Engineering" have a great deal more men than women. However, at the same time, some fields like "Psychology" have a disproportionate number of females compared to males. Meanwhile, looking at unemployment, men are jobless at higher rates in "Communications" than their female counterparts but women suffer from higher unemployment than men in "Computers, maths, and stats". Of course, this extends far beyond gender and unemployment. For example, "White" Americans hold the lion's share of bachelor's degrees but, adjusting by the size of the overall national population per ethnic group, it turns out that "Asians" earn degrees at higher rates. Additionally, regardless of gender, "African Americans" have higher unemployment rates than all other ethic groups, even after they achieve the same degree. Yet, still, the numbers become fairly close in some disciplines like "Education". That said, men certainly earn more income than their female counterparts in all fields but, even in that generalization, the disparity varies greatly depending on the discipline at hand. Given this nuance, this project cannot tell its readers what to think but it can invite them to dive deeply into the data, asking them to mouse over the visualization and to configure the radio buttons that choose the metrics displayed.</p>
-            <p>Note that the <a href="http://www.census.gov/prod/2012pubs/acs-18.pdf">US Census provides a description of each category</a> (pg 21).</p>
-          </div>
-        </div>
-        <div class="write-up-section">
-          <div class="write-up-header">What should I know about the data?</div>
-          <div class="write-up-contents">While this project hopes to eventually draw data directly from an API published by the US Census, it currently combines a few different Census reports. First, earnings information comes from <a href="http://www.census.gov/prod/2012pubs/acsbr11-10.pdf">a 2012 report</a> and the <a href="http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_11_5YR_S2402&prodType=table">US Census Fact Finder</a>, both using 2011 American Community Survey information. However, the <a href="https://www.census.gov/people/io/files/Table%201.%20Field%20of%20degree.xlsx">number of people with each degree</a>, <a href="https://www.census.gov/people/io/files/Table%203.%20Unemployment.xlsx">unemployment</a>, and overall population by age and ethnicity (<a href="http://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t">US Census Fact Finder</a>) come from the 2012 American Community Survey. The 2011 income data use median income for those over the age of 16 when discussing the general population while median income for those with a bachelor's degree starts at age 25. The 2012 data focus on ages 25-64. So, this report attempts to use the data consistently (not display data from different ACS years at the same time) but there are still multiple datasets represented. For more details, see works cited below.</div>
-        </div>
-        <div class="write-up-section">
-          <div class="write-up-header">I have some thoughts about this visual design. Any papers that you suggest I review?</div>
-          <div class="write-up-contents">
-              <ul>
-                <li><a href="https://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-fall/readings/tablelens.pdf">Table Lens</a> (1994 public academic paper)</li>
-                <li><a href="http://en.wikipedia.org/wiki/Parallel_coordinates">Philbert Maurice d'Ocagne's parallel coordinates</a> (1885)</li>
-                <li>Harness-Minard-Sankey Diagram (1838, 1869, 1898)</li>
-                <li>Stephen Few's "<a href="http://www.perceptualedge.com/articles/visual_business_intelligence/coordinated_highlighting_in_context.pdf">proportional highlighting</a>" (2010 public paper)</li>
-                <li>To a lesser extent, <a href="https://graphics.stanford.edu/papers/polaris/polaris.pdf">Polaris</a> (2000 public academic paper)</li>
-              </ul>
-              <p>Anyway, despite some room for improvement, I hope this work takes a logical step in those long lines of thought within visualization science. All that said, these design considerations and the overall visual structure are very unlikely to suit general purpose visualization and the their tools. Some trade-offs were made in regards to the dynamics of this very specific dataset.</p>
-            </div>
-        </div>
-        <div class="write-up-section">
-          <div class="write-up-header">Works cited?</div>
-          <div class="write-up-contents">
-            <p>Always.</p>
-            <p>
-              <ul>
-                <li>Few, Stephen. "Coordinated Highlighting in Context" Visual Business Intelligence Newsletter (2010). July 2010. Web. 20 Dec. 2014.</li>
-                <li>"INDUSTRY BY SEX AND MEDIAN EARNINGS IN THE PAST 12 MONTHS (IN 2011 INFLATION-ADJUSTED DOLLARS) FOR THE FULL-TIME, YEAR-ROUND CIVILIAN EMPLOYED POPULATION 16 YEARS AND OVER 2007-2011 American Community Survey 5-Year Estimates." American FactFinder. US Census Bureau. Web. 20 Dec. 2014.</li>
-                <li>"Parallel Coordinates." Wikipedia. Wikimedia Foundation. Web. 20 Dec. 2014.</li>
-                <li>Rao, Ramana, and Stuart K. Card. "The Table Lens: Merging Graphical and Symbolic Representations in an Interactive Focus+context Visualization for Tabular Information." CHI '94 Conference Companion on Human Factors in Computing Systems: 222. ACM Digital Library. ACM. Web. 20 Dec. 2014.</li>
-                <li>Ryan, Camille. "Field of Degree and Earnings by Selected Employment Characteristics: 2011." American Community Survey Briefs (2012). Oct. 2012. Web. 20 Dec. 2014.</li>
-                <li>"Sankey Diagram." Wikipedia. Wikimedia Foundation. Web. 20 Dec. 2014.</li>
-                <li>"Sankey or Harness?" The Economist. The Economist Newspaper, 04 July 2011. Web. 20 Dec. 2014.</li>
-                <li>"SEX BY AGE (ASIAN ALONE) Universe: People Who Are Asian Alone 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
-                <li>"SEX BY AGE (BLACK OR AFRICAN AMERICAN ALONE) Universe: People Who Are Black or African American Alone 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
-                <li>"SEX BY AGE (HISPANIC OR LATINO) Universe: People Who Are Hispanic or Latino 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
-                <li>"SEX BY AGE (WHITE ALONE, NOT HISPANIC OR LATINO) Universe: White Alone, Not Hispanic or Latino Population 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
-                <li>Green, Hank, and John Green. "YOU ARE WRONG!" YouTube. YouTube, 19 Jan. 2011. Web. 21 Dec. 2014.</li>
-                <li>Siebens, Julie, and Camille L. Ryan. "Field of Bachelor's Degree in the United States: 2009." American Community Survey Briefs (2012). Feb. 2012. Web. 20 Dec. 2014.</li>
-                <li>Stolte, Chris, and Pat Hanrahan. "Polaris: A System for Query, Analysis and Visualization of Multi-dimensional Relational Databases." INFOVIS '00 Proceedings of the IEEE Symposium on Information Vizualization 2000 (2000): 5. Stanford Computer Graphics Laboratory. Stanford University. Web. 20 Dec. 2014.</li>
-                <li>"Table 1. Sex, Race, and Hispanic Origin by Field of Degree for the First Listed Bachelor's Degree: 2012." United States Census Bureau. United States Census Bureau, 10 June 2014. Web. 20 Dec. 2014.</li>
-                <li>"Table 3. Percent Unemployed by Field of Degree, Occupation, Sex, Race, and Hispanic Origin: 2012." US Census Bureau. US Census Bureau, 10 July 2014. Web. 20 Dec. 2014.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-        <div class="write-up-section">
-            <div class="write-up-header">Who are you? Who did this?</div>
+          <div class="write-up-section">
+            <div class="write-up-header">What did you learn?</div>
             <div class="write-up-contents">
-              <p>You can find more info about me and my past work at <a href="http://gleap.org">my personal website</a>. This was a self-directed personal (two) weekend project. <span id="non-official-disclaimer">This is not an official Google product</span>. It is open source and hosted at github under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a> license. Please see github for the license and copyright information. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees.</p>
+              <p>This visualization underscores an unavoidable complexity in discussing educational background and post-college outcomes. Even in the broad scope of the US Census, the data, like truth, resist simplicity (Green).</p> 
+              <p>Let's take some examples... While this visualization highlights similarity between genders in overall educational attainment, some degrees like "Engineering" have a great deal more men than women. However, at the same time, some fields like "Psychology" have a disproportionate number of females compared to males. Meanwhile, looking at unemployment, men are jobless at higher rates in "Communications" than their female counterparts but women suffer from higher unemployment than men in "Computers, maths, and stats". Of course, this extends far beyond gender and unemployment. For example, "White" Americans hold the lion's share of bachelor's degrees but, adjusting by the size of the overall national population per ethnic group, it turns out that "Asians" earn degrees at higher rates. Additionally, regardless of gender, "African Americans" have higher unemployment rates than all other ethic groups, even after they achieve the same degree. Yet, still, the numbers become fairly close in some disciplines like "Education". That said, men certainly earn more income than their female counterparts in all fields but, even in that generalization, the disparity varies greatly depending on the discipline at hand. Given this nuance, this project cannot tell its readers what to think but it can invite them to dive deeply into the data, asking them to mouse over the visualization and to configure the radio buttons that choose the metrics displayed.</p>
+              <p>Note that the <a href="http://www.census.gov/prod/2012pubs/acs-18.pdf">US Census provides a description of each category</a> (pg 21).</p>
             </div>
+          </div>
+          <div class="write-up-section">
+            <div class="write-up-header">What should I know about the data?</div>
+            <div class="write-up-contents">While this project hopes to eventually draw data directly from an API published by the US Census, it currently combines a few different Census reports. First, earnings information comes from <a href="http://www.census.gov/prod/2012pubs/acsbr11-10.pdf">a 2012 report</a> and the <a href="http://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=ACS_11_5YR_S2402&prodType=table">US Census Fact Finder</a>, both using 2011 American Community Survey information. However, the <a href="https://www.census.gov/people/io/files/Table%201.%20Field%20of%20degree.xlsx">number of people with each degree</a>, <a href="https://www.census.gov/people/io/files/Table%203.%20Unemployment.xlsx">unemployment</a>, and overall population by age and ethnicity (<a href="http://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml?refresh=t">US Census Fact Finder</a>) come from the 2012 American Community Survey. The 2011 income data use median income for those over the age of 16 when discussing the general population while median income for those with a bachelor's degree starts at age 25. The 2012 data focus on ages 25-64. So, this report attempts to use the data consistently (not display data from different ACS years at the same time) but there are still multiple datasets represented. For more details, see works cited below.</div>
+          </div>
+          <div class="write-up-section">
+            <div class="write-up-header">I have some thoughts about this visual design. Any papers that you suggest I review?</div>
+            <div class="write-up-contents">
+                <ul>
+                  <li><a href="https://www.cs.ubc.ca/~tmm/courses/cpsc533c-04-fall/readings/tablelens.pdf">Table Lens</a> (1994 public academic paper)</li>
+                  <li><a href="http://en.wikipedia.org/wiki/Parallel_coordinates">Philbert Maurice d'Ocagne's parallel coordinates</a> (1885)</li>
+                  <li>Harness-Minard-Sankey Diagram (1838, 1869, 1898)</li>
+                  <li>Stephen Few's "<a href="http://www.perceptualedge.com/articles/visual_business_intelligence/coordinated_highlighting_in_context.pdf">proportional highlighting</a>" (2010 public paper)</li>
+                  <li>To a lesser extent, <a href="https://graphics.stanford.edu/papers/polaris/polaris.pdf">Polaris</a> (2000 public academic paper)</li>
+                </ul>
+                <p>Anyway, despite some room for improvement, I hope this work takes a logical step in those long lines of thought within visualization science. All that said, these design considerations and the overall visual structure are very unlikely to suit general purpose visualization and the their tools. Some trade-offs were made in regards to the dynamics of this very specific dataset.</p>
+              </div>
+          </div>
+          <div class="write-up-section">
+            <div class="write-up-header">Works cited?</div>
+            <div class="write-up-contents">
+              <p>Always.</p>
+              <p>
+                <ul>
+                  <li>Few, Stephen. "Coordinated Highlighting in Context" Visual Business Intelligence Newsletter (2010). July 2010. Web. 20 Dec. 2014.</li>
+                  <li>"INDUSTRY BY SEX AND MEDIAN EARNINGS IN THE PAST 12 MONTHS (IN 2011 INFLATION-ADJUSTED DOLLARS) FOR THE FULL-TIME, YEAR-ROUND CIVILIAN EMPLOYED POPULATION 16 YEARS AND OVER 2007-2011 American Community Survey 5-Year Estimates." American FactFinder. US Census Bureau. Web. 20 Dec. 2014.</li>
+                  <li>"Parallel Coordinates." Wikipedia. Wikimedia Foundation. Web. 20 Dec. 2014.</li>
+                  <li>Rao, Ramana, and Stuart K. Card. "The Table Lens: Merging Graphical and Symbolic Representations in an Interactive Focus+context Visualization for Tabular Information." CHI '94 Conference Companion on Human Factors in Computing Systems: 222. ACM Digital Library. ACM. Web. 20 Dec. 2014.</li>
+                  <li>Ryan, Camille. "Field of Degree and Earnings by Selected Employment Characteristics: 2011." American Community Survey Briefs (2012). Oct. 2012. Web. 20 Dec. 2014.</li>
+                  <li>"Sankey Diagram." Wikipedia. Wikimedia Foundation. Web. 20 Dec. 2014.</li>
+                  <li>"Sankey or Harness?" The Economist. The Economist Newspaper, 04 July 2011. Web. 20 Dec. 2014.</li>
+                  <li>"SEX BY AGE (ASIAN ALONE) Universe: People Who Are Asian Alone 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
+                  <li>"SEX BY AGE (BLACK OR AFRICAN AMERICAN ALONE) Universe: People Who Are Black or African American Alone 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
+                  <li>"SEX BY AGE (HISPANIC OR LATINO) Universe: People Who Are Hispanic or Latino 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
+                  <li>"SEX BY AGE (WHITE ALONE, NOT HISPANIC OR LATINO) Universe: White Alone, Not Hispanic or Latino Population 2008-2012 American Community Survey 5-Year Estimates." American FactFinder - US Census Bureau. US Census Bureau. Web. 20 Dec. 2014.</li>
+                  <li>Green, Hank, and John Green. "YOU ARE WRONG!" YouTube. YouTube, 19 Jan. 2011. Web. 21 Dec. 2014.</li>
+                  <li>Siebens, Julie, and Camille L. Ryan. "Field of Bachelor's Degree in the United States: 2009." American Community Survey Briefs (2012). Feb. 2012. Web. 20 Dec. 2014.</li>
+                  <li>Stolte, Chris, and Pat Hanrahan. "Polaris: A System for Query, Analysis and Visualization of Multi-dimensional Relational Databases." INFOVIS '00 Proceedings of the IEEE Symposium on Information Vizualization 2000 (2000): 5. Stanford Computer Graphics Laboratory. Stanford University. Web. 20 Dec. 2014.</li>
+                  <li>"Table 1. Sex, Race, and Hispanic Origin by Field of Degree for the First Listed Bachelor's Degree: 2012." United States Census Bureau. United States Census Bureau, 10 June 2014. Web. 20 Dec. 2014.</li>
+                  <li>"Table 3. Percent Unemployed by Field of Degree, Occupation, Sex, Race, and Hispanic Origin: 2012." US Census Bureau. US Census Bureau, 10 July 2014. Web. 20 Dec. 2014.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="write-up-section">
+              <div class="write-up-header">Who are you? Who did this?</div>
+              <div class="write-up-contents">
+                <p>You can find more info about me and my past work at <a href="http://gleap.org">my personal website</a>. This was a self-directed personal (two) weekend project. <span id="non-official-disclaimer">This is not an official Google product</span>. It is open source and hosted at github under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a> license. Please see github for the license and copyright information. The views and opinions expressed here are those of the author and do not necessarily reflect the views of Google, its affiliates, or its employees.</p>
+              </div>
+          </div>
         </div>
       </div>
     </div>
