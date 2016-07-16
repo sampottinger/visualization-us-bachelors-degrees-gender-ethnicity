@@ -787,35 +787,47 @@ function updateTitle(selectedMetric, selectedCalc) {
 
 
 /**
+ * Reset styling changes caused by user interaction.
+ */
+function resetStyling() {
+  var disciplineGroupSelection = d3.selectAll('.discipline-group');
+
+  disciplineGroupSelection.selectAll('.overview-text')
+      .attr('fill', '#838383');
+
+  disciplineGroupSelection.selectAll('.metric-bar')
+      .attr('fill', '#838383');
+
+  disciplineGroupSelection.selectAll('.ethnicity-text')
+      .attr('fill', '#B1B1B1');
+
+  d3.selectAll('.flow-source-chord')
+      .attr('opacity', 0.3);
+
+  d3.selectAll('.flow-source-chord')
+      .attr('stroke', '#C1C1C1');
+
+  d3.selectAll('.flow-sources-rect').attr('fill', '#838383');
+  
+  d3.selectAll('.flow-label').attr('fill', '#838383');
+  
+  d3.selectAll('.flow-source-chord').attr('opacity', 0.3);
+  
+  d3.selectAll('.flow-source-chord').attr('stroke', '#C1C1C1');
+};
+
+
+/**
  * Attach hover listeners for the middle part of the visualization.
  *
  * @param {{metric: string, calc: string}} selectionInfo Information about the
  *     set of user configuration options currently selected.
  */
 function attachMiddleListeners(selectionInfo) {
-  var disciplineGroupSelection = d3.selectAll('.discipline-group');
-
-  var resetStyling = function() {
-    disciplineGroupSelection.selectAll('.overview-text')
-        .attr('fill', '#838383');
-
-    disciplineGroupSelection.selectAll('.metric-bar')
-        .attr('fill', '#838383');
-
-    disciplineGroupSelection.selectAll('.ethnicity-text')
-        .attr('fill', '#B1B1B1');
-
-    d3.selectAll('.flow-source-chord')
-        .attr('opacity', 0.3);
-
-    d3.selectAll('.flow-source-chord')
-        .attr('stroke', '#C1C1C1');
-  };
 
   resetStyling();
 
-  var mouseActivate = function(datum) {
-    var groupSelection = d3.select(this);
+  var mouseActivate = function(groupSelection, datum) {
     groupSelection.selectAll('.overview-text').attr('fill', 'black');
     groupSelection.selectAll('.metric-bar').attr('fill', 'black');
     groupSelection.selectAll('.ethnicity-text').attr('fill', 'black');
@@ -873,7 +885,9 @@ function attachMiddleListeners(selectionInfo) {
         .attr('stroke', 'black');
   }
 
-  d3.selectAll('.discipline-group').on('mouseenter', mouseActivate);
+  d3.selectAll('.discipline-group').on('mouseenter', function(datum) {
+    mouseActivate(d3.select(this), datum);
+  });
 
   var mouseDeactivate = function() {
     $('#middle-section-details-panel').hide();
@@ -883,7 +897,10 @@ function attachMiddleListeners(selectionInfo) {
 
   d3.selectAll('.discipline-group').on('mouseleave', mouseDeactivate);
 
-  d3.selectAll('.discipline-group').on('click', mouseActivate);
+  d3.selectAll('.discipline-group').on('click', function(datum) {
+    resetStyling();
+    mouseActivate(d3.select(this), datum);
+  });
 }
 
 
@@ -894,17 +911,10 @@ function attachMiddleListeners(selectionInfo) {
  *     user configuration options currently selected.
  */
 function attachFlowListeners(selectionInfo) {
-  
-  var resetStyling = function() {
-    d3.selectAll('.flow-sources-rect').attr('fill', '#838383');
-    d3.selectAll('.flow-label').attr('fill', '#838383');
-    d3.selectAll('.flow-source-chord').attr('opacity', 0.3);
-    d3.selectAll('.flow-source-chord').attr('stroke', '#C1C1C1');
-  };
 
   resetStyling();
-
-  d3.selectAll('.flow-sources-hover-region').on('mouseenter', function(datum) {
+  
+  var mouseActivate = function(datum) {
     $('#instructions-details-panel').hide();
     $('#side-section-details-panel').show();
     $('#middle-section-details-panel').hide();
@@ -936,12 +946,19 @@ function attachFlowListeners(selectionInfo) {
         })
         .attr('opacity', 1)
         .attr('stroke', 'black');
-  });
+  };
+
+  d3.selectAll('.flow-sources-hover-region').on('mouseenter', mouseActivate);
 
   d3.selectAll('.flow-sources-hover-region').on('mouseleave', function() {
     resetStyling();
     $('#instructions-details-panel').show();
     $('#side-section-details-panel').hide();
+  });
+  
+  d3.selectAll('.flow-sources-hover-region').on('click', function(datum) {
+    resetStyling();
+    mouseActivate(datum);
   });
 }
 
