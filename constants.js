@@ -428,4 +428,4 @@ var SCROLL_TOP = 100;
  * Scroll region for bottom of visualization
  * @const
  */
-var SCROLL_BOTTOM = 1000;
+var SCROLL_BOTTOM = 950;
