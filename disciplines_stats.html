@@ -28,7 +28,7 @@
     <div class="container">
       <div class="overall-header" id="overall-header">
         <h1>What do different genders and ethnicities<br>study in college and what are their post-graduation outcomes?</h1>
-        <p id="intro"><span class="question">What are the men and women of America studying in college and how do their outcomes differ based on their degree, gender, and ethnicity?</span> Through the lens of gender and ethnicity, this visualization of US bachelor's degrees examines achievement and outcome in terms of unemployment and median income.</p>
+        <p id="intro"><span class="question">What are the men and women of America studying in college and how do their outcomes differ based on their major?</span> Through the lens of gender and ethnicity, this visualization of US bachelor's degrees examines achievement and outcome in terms of unemployment and median income.</p>
         <p><a id="start-link" href="#">Next >></a>
       </div>
       <div id="post-intro-contents">
@@ -87,12 +87,13 @@
                 <label><input type="radio" value="size" name="which" class="which-check" checked> Number of degree holders</label>
                 <label><input type="radio" value="unemployment" name="which" class="which-check"> Unemployment</label>
                 <label><input type="radio" value="earnings" name="which" class="which-check"> Median income *</label>
-                <div class="notes" id="income-note">* = Income data currently only available by gender. See commentary below.</div>
+                <div class="notes" id="income-note">* = Income data currently only available by gender. See below.</div>
               </div>
               <div class="col-xs-6" id="how-panel">
                 <label><input type="radio" value="population" name="how" class="how-check" checked> Count</label>
-                <label><input type="radio" value="percent_by_pop_group" name="how" class="how-check"> % of Overall Population<label>
+                <label><input type="radio" value="percent_by_pop_group" name="how" class="how-check"> % of Overall Gender / Ethnic Pop **</label>
                 <label><input type="radio" value="percent" name="how" class="how-check"> % of Degree-Holders</label>
+                <div class="notes" id="by-group-note">** = Unemployment information as % of gender / ethnic pop not available. See below.</div>
               </div>
             </div>
           </div>
@@ -104,7 +105,6 @@
         <script src="./disciplines_stats.js"></script>
         <script>
           d3.json('./combined.json', onLoad);
-          $('#disciplines-vis-target').delay(1000).slideDown();
         </script>
         <div id="report">
           <div class="write-up-section">

@@ -1063,6 +1063,9 @@ function attachMiddleListeners(selectionInfo) {
   resetStyling();
 
   var mouseActivate = function(groupSelection, datum) {
+    $(".display-panel-label").hide();
+    $(".display-panel-caption").hide();
+
     groupSelection.selectAll('.overview-text').attr('fill', 'black');
     groupSelection.selectAll('.metric-bar').attr('fill', 'black');
     groupSelection.selectAll('.ethnicity-text').attr('fill', 'black');
@@ -1118,6 +1121,9 @@ function attachMiddleListeners(selectionInfo) {
         })
         .attr('opacity', 1)
         .attr('stroke', 'black');
+
+    $(".display-panel-label").fadeIn('fast');
+    $(".display-panel-caption").fadeIn('fast');
   }
 
   d3.selectAll('.discipline-group').on('mouseenter', function(datum) {
@@ -1154,6 +1160,9 @@ function attachFlowListeners(selectionInfo) {
     $('#side-section-details-panel').show();
     $('#middle-section-details-panel').hide();
 
+    $(".display-panel-label").hide();
+    $(".display-panel-caption").hide();
+
     var labelsSet = CHORD_LABELS_SET.get(selectionInfo.metric)
         .get(selectionInfo.calc);
 
@@ -1181,6 +1190,9 @@ function attachFlowListeners(selectionInfo) {
         })
         .attr('opacity', 1)
         .attr('stroke', 'black');
+
+    $(".display-panel-label").fadeIn('fast');
+    $(".display-panel-caption").fadeIn('fast');
   };
 
   d3.selectAll('.flow-sources-hover-region').on('mouseenter', mouseActivate);
@@ -1214,6 +1226,7 @@ function onLoad(error, rawData) {
   };
 
   $('#start-link').click(function() {
+    $('#disciplines-vis-target').show();
     $('#overall-header').slideUp();
     $('#post-intro-contents').fadeIn();
     started = true;
@@ -1368,11 +1381,13 @@ $(window).scroll(function() {
 
 
 function formatShortString(number) {
+  var decimalFormatter = d3.format('.2g');
+
   if (number > 1000000) {
-    return d3.format('.2g')(number / 1000000.0) + 'M';
+    return decimalFormatter(number / 1000000.0) + 'M';
   } else if (number > 1000) {
-    return d3.format('.2g')(number / 1000.0) + 'K';
+    return decimalFormatter(number / 1000.0) + 'K';
   } else {
-    return number;
+    return decimalFormatter(number);
   }
 }
